@@ -134,51 +134,31 @@
               <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                   <li class="nav-item">
-                    <a href="./index.html" class="nav-link active"><i class="fe fe-home"></i> Nueva Venta</a>
+                    <a href="./nueva_venta.html" class="nav-link active"><i class="fe fe-home"></i> Nueva Venta</a>
                   </li>
                   <li class="nav-item">
                     <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Consultas</a>
                     <div class="dropdown-menu dropdown-menu-arrow">
-                      <a href="./cards.html" class="dropdown-item ">Cards design</a>
-                      <a href="./charts.html" class="dropdown-item ">Charts</a>
-                      <a href="./pricing-cards.html" class="dropdown-item ">Pricing cards</a>
+                      <a href="./listado_de_pedidos_con_saldo.html" class="dropdown-item ">Pedidos con Saldo</a>
+                      <a href="./listado_de_pedidos.html" class="dropdown-item ">Todos los Pedidos</a>
+                      <a href="#" class="dropdown-item ">Pagos del Día</a>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
                     <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Búsqueda</a>
                     <div class="dropdown-menu dropdown-menu-arrow">
-                      <a href="./maps.html" class="dropdown-item ">Maps</a>
-                      <a href="./icons.html" class="dropdown-item ">Icons</a>
-                      <a href="./store.html" class="dropdown-item ">Store</a>
-                      <a href="./blog.html" class="dropdown-item ">Blog</a>
+                      <a href="./maps.html" class="dropdown-item ">Pedidos</a>
+                      <a href="./icons.html" class="dropdown-item ">Pagos</a>
                     </div>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file"></i> Cerrar Caja</a>
-                    <div class="dropdown-menu dropdown-menu-arrow">
-                      <a href="./profile.html" class="dropdown-item ">Profile</a>
-                      <a href="./login.html" class="dropdown-item ">Login</a>
-                      <a href="./register.html" class="dropdown-item ">Register</a>
-                      <a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>
-                      <a href="./400.html" class="dropdown-item ">400 error</a>
-                      <a href="./401.html" class="dropdown-item ">401 error</a>
-                      <a href="./403.html" class="dropdown-item ">403 error</a>
-                      <a href="./404.html" class="dropdown-item ">404 error</a>
-                      <a href="./500.html" class="dropdown-item ">500 error</a>
-                      <a href="./503.html" class="dropdown-item ">503 error</a>
-                      <a href="./email.html" class="dropdown-item ">Email</a>
-                      <a href="./empty.html" class="dropdown-item ">Empty page</a>
-                      <a href="./rtl.html" class="dropdown-item ">RTL mode</a>
-                    </div>
+                    <a href="#" class="nav-link" data-toggle="dropdown"><i class="fe fe-file"></i> Corte de Caja</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="listado_de_articulos.html" class="nav-link"><i class="fe fe-image"></i> Artículos</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="./form-elements.html" class="nav-link"><i class="fe fe-check-square"></i> Forms</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="./gallery.html" class="nav-link"><i class="fe fe-image"></i> Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="./docs/index.html" class="nav-link"><i class="fe fe-file-text"></i> Documentation</a>
+                    <a href="./form-elements.html" class="nav-link"><i class="fe fe-upload"></i> Sync</a>
                   </li>
                 </ul>
               </div>
@@ -201,7 +181,7 @@
                       <i class="fe fe-chevron-up"></i>
                     </div>
                     <div class="h1 m-0">43</div>
-                    <div class="text-muted mb-4">New Tickets</div>
+                    <div class="text-muted mb-4">Cantidad de Ventas</div>
                   </div>
                 </div>
               </div>
@@ -268,16 +248,15 @@
               <div class="col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Development Activity</h3>
+                    <h3 class="card-title">Actividad Durante el Día</h3>
                   </div>
                   <div id="chart-development-activity" style="height: 10rem"></div>
                   <div class="table-responsive">
                     <table class="table card-table table-striped table-vcenter">
                       <thead>
                         <tr>
-                          <th colspan="2">User</th>
-                          <th>Commit</th>
-                          <th>Date</th>
+                          <th>Hora</th>
+                          <th>Ventas</th>
                           <th></th>
                         </tr>
                       </thead>
