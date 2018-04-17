@@ -169,115 +169,161 @@
           <div class="container">
             <div class="page-header">
               <h1 class="page-title">
-                Pedido #9876
+                Listado de Artículos
               </h1>
             </div>
 
             <div class="col-12">
 
-              <!-- FIRST CARD DECK -->
-              <div class="row row-cards row-deck">
-
-                <div class="col-4">
-                  <div class="card">
-                    <div class="card-status bg-green"></div>
-                    <div class="card-body text-left">
-                      <div class="card-category">SYNC: 2018-03-29</div>
-                      <ul>
-                        <li>Fecha: 2018-03-29 10:42:28 </li>
-                        <li>Vendedor: Juan Perez</li>
-                        <li>Comentarios: Lorem ipsum</li>
-                      </ul>
+                <div class="card">
+                  
+                  <div class="card-header">
+                      <div class="card-options">
+                        <form action="">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                  <span class="input-group-text">Buscar</span>
+                                </span>
+                                <input type="text" class="form-control text-left" aria-label="Buscar">
+                                <span class="input-group-append">
+                                  <span class="input-group-text"><i class="fe fe-shopping-bag"></i></span>
+                                </span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text">Categoría</span>
+                                </span>
+                                <select class="form-control custom-select" name="vendedor">
+                                  <option>Todas las Categorías</option>
+                                  <option>Bebidas</option>
+                                  <option>Alimentos</option>
+                                </select>
+                                <span class="input-group-append">
+                                    <span class="input-group-text"><i class="fe fe-shopping-cart"></i></span>
+                                </span>
+                                &nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-primary">Buscar</button>
+                              </div>
+                        </form>
+                      </div>
                     </div>
-                    <div class="card-body text-left">
-                        <div class="card-category">COMENTARIOS</div>
-                        <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </span>
+
+                    <div class="table-responsive">
+                      <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+                        
+                        <thead>
+                          <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th class="text-right">Existencia</th>
+                            <th>Unidad</th>
+                            <th class="text-right">I.V.A.</th>
+                            <th class="text-right">P. Unit.</th>
+                            <th class="text-right">Precio Imp./Incl.</th>
+                            <th class="text-center"><i class="icon-settings"></i></th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td class="text-left">
+                              CLAV7856
+                            </td>
+                            <td class="text-left">
+                             CLAVOS PARA CONCRETO ABC 
+                            </td>
+                            <td class="text-right">
+                              200
+                            </td>
+                            <td class="text-left">
+                              PZA
+                             </td>
+                            <td class="text-right">
+                              16%
+                            </td>
+                            <td class="text-right">
+                              $1.00
+                            </td>
+                            <td class="text-right">
+                              $1.16
+                            </td>
+                            <td class="text-center">
+                              <div class="item-action dropdown">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="icon" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(15px, 20px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                  <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-upload"></i> Sync</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="text-left">
+                              TOR0101
+                            </td>
+                            <td class="text-left">
+                             TORNILLO PARA MADERA 1/2" 
+                            </td>
+                            <td class="text-right">
+                              12
+                            </td>
+                            <td class="text-left">
+                              PZA
+                             </td>
+                            <td class="text-right">
+                              16%
+                            </td>
+                            <td class="text-right">
+                              $0.50
+                            </td>
+                            <td class="text-right">
+                              $0.58
+                            </td>
+                            <td class="text-center">
+                              <div class="item-action dropdown">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="icon" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(15px, 20px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                  <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-upload"></i> Sync</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="text-left">
+                              CLAV097339
+                            </td>
+                            <td class="text-left">
+                             CLAVO DE MADERA PUNTO FINO
+                            </td>
+                            <td class="text-right">
+                              5
+                            </td>
+                            <td class="text-left">
+                              KGS
+                             </td>
+                            <td class="text-right">
+                              16%
+                            </td>
+                            <td class="text-right">
+                              $13.00
+                            </td>
+                            <td class="text-right">
+                              $15.08
+                            </td>
+                            <td class="text-center">
+                              <div class="item-action dropdown">
+                                <a href="javascript:void(0)" data-toggle="dropdown" class="icon" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(15px, 20px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                  <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-upload"></i> Sync</a>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
                     </div>
                   </div>
-                </div>
-
-                <div class="col-8">
-                  <div class="card">
-                    <div class="card-body text-center">
-                      
-                        <table class="table card-table table-vcenter text-nowrap">
-                            <thead>
-                              <tr>
-                                <th class="w-1"></th>
-                                <th class="text-center">CODIGO</th>
-                                <th class="text-center">DESC.</th>
-                                <th class="text-right">CANTIDAD</th>
-                                <th class="text-right">PRECIO UNITARIO</th>
-                                <th class="text-right">DESCUENTO</th>
-                                <th class="text-right">IMPORTE</th>
-                              </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                  <td>img</td>
-                                  <td><span class="text-muted">001401</span></td>
-                                  <td><span class="text-muted">Tornillos para Madera</span></td>
-                                  <td class="text-right">125</td>
-                                  <td class="text-right">$15.00</td>
-                                  <td class="text-right">0%</td>
-                                  <td class="text-right">$1,875.00</td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- END FIRST CARD DECK -->
-            
-            <!-- SECOND CARD DECK -->
-            <div class="row row-cards row-deck">
-                <div class="col-md-8">
-                  <div class="card">
-                    <div class="card-header">
-                      PAGOS
-                    </div>
-                    <div class="card-body text-center">
-                        <div class="form-group">
-                          <label class="form-label">Caja Chica</label>
-                          <select class="form-control" name="bank_account" >
-                            <option>Caja Chica Sucursal #1</option>
-                            <option>Terminal Banorte</option>
-                            <option>Terminal Afirme</option>
-                          </select>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                          <table class="table card-table table-vcenter text-nowrap">
-                            <tbody>
-                              <tr>
-                                <td class="text-left"><h3>Subtotal:</h3></td>
-                                <td class="text-right"><h3>$1,875.00</h3></td>
-                              </tr>
-                              <tr>
-                                <td class="text-left"><h3>IVA 16%:</h3></td>
-                                <td class="text-right"><h3>$300.00</h3></td>
-                              </tr>
-                              <tr>
-                                <td class="text-left"><h3>Total:</h3></td>
-                                <td class="text-right"><h3>$2,175.00</h3></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-            <!-- END SECOND CARD DECK -->
 
             </div>
 
