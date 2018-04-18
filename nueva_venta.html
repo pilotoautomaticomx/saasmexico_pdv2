@@ -183,14 +183,177 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <a class="btn btn-secondary btn-sm">Alimentos</a>
+                                <a class="btn btn-secondary btn-sm" class="Alimentos_1">Alimentos</a>
+
+                                  <!--INTENTANDO REALIZAR QUE LA PAGINA CUANDO SE CARGE APAREZCA POR DEFAULT LA CATEGORIA ALIMENTO------->
+                                  <script>
+                                    while (onload) {
+                                        function(){
+
+                                        };
+                                    }
+
+                                    onload="function(Default_cargaAlimento)";
+
+
+                                    //Intentando hacer un onclick en cada categoria
+                                    
+
+                                    //REALIZAR QUE CUANDO SE SELECCIONE LA CATEGORÍA DE ALIMENTOS APAREZCAN EN LA PRIMERA TABLA
+                                    // Y DESPUÉS SU INFORMACIÓN ADICIONAL EN LA SEGUNDA
+                                    Alimentos_1.onclick=function(){
+
+                                      document.write(ensaladapollo, hamburguesa, malteada);
+                                    };
+
+                                    var All_1 [ensaladapollo,hamburguesa,malteada,refresco_cola,limonada,espaguetti_bolonesa,
+                                      pescado_salsa_verde,tamales,chicles,cafe,Cono_helado_vainilla,pago_telefonico,servicio_agua,Pluma,memoriaUSB];
+
+                                    var All_2 [codigo_ensaladaPollo,codigo_hamburguesa,codigo_malteada,codigo_refresco_cola,
+                                      codigo_limonada,codigo_jugo_naranja,codigo_espaguettiBolonesa,codigo_pescadoSalsaVerde,codigo_tamales,
+                                      codigo_chicles,codigo_cafe,codigo_helado,codigo_pagoTelefonico,codigoServAgua,codigo_Pluma,codigo_memUSB];
+
+                                    //DECLARANDO ARRAYS PARA LA CATEGORIA ALIMENTOS
+                                    var ensaladapollo = [
+                                      codigo_ensaladaPollo = "00001",
+                                      Descripcion_ensaladaPollo = "Ensalada de pollo",
+                                      Cantidad = 1,
+                                      PrecioUnitario = "$25.00"
+                                    ];
+
+                                    var hamburguesa = [
+                                      codigo_hamburguesa = "00002",
+                                      Descripcion_hamburguesa = "Hamburguesa",
+                                      Cantidad = 1,
+                                      PrecioUnitario = "$20.00"
+                                    ];
+
+                                    var malteada = [
+                                      codigo_malteada = "00003",
+                                      Descripcion_malteada = "Malteada de Fresa",
+                                      Cantidad = 1,
+                                      PrecioUnitario = "$30.00"
+                                    ];
+                                  </script>
+
+
                                 <a class="btn btn-secondary btn-sm">Bebidas</a>
+
+                                <!---cREANDO LA INFORMACIÓN PARA LA CATEGORÍA BEBIDAS----->
+                                <script>
+                                  var refresco_cola = [
+                                    codigo_refresco_cola = "00004",
+                                    Descripcion_refresco_cola = "Refresco de Sabor CocaCola",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$10.00"
+                                  ];
+
+                                  var limonada = [
+                                    codigo_limonada = "00005",
+                                    Descripcion_limonada = "Limonada Natural",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$15.00"
+                                  ];
+
+                                  var jugo_naranja = [
+                                    codigo_jugo_naranja = "00006",
+                                    Descripcion_jugo_naranja = "Rico Jugo de Naranja",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$13.00"
+                                  ];
+                                </script>
+
                                 <a class="btn btn-secondary btn-sm">Platillos</a>
+
+                                <!--Creando LA INFORMACIÓN DE LOS PLATILLOS A ESCOGER----->
+                                <script>
+                                  var espaguetti_bolonesa = [
+                                    codigo_espaguettiBolonesa = "00007",
+                                    Descripcion_espaguettiBolonesa = "Espaguetti a la Boloñesa",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$30.00"
+                                  ];
+
+                                  var pescado_salsa_verde = [
+                                    codigo_pescadoSalsaVerde = "00008",
+                                    Descripcion_pescadoSalsaVerde = "Pescado bañado en salsa verde",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$40.00"
+                                  ];
+
+                                  var tamales = [
+                                    codigo_tamales = "00009",
+                                    Descripcion_tamales = "Tamales de Carne con guarniciones",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$35.00"
+                                  ];
+                                </script>
+
+                                <!--VALORES PARA EXTRAS------->
                                 <a class="btn btn-secondary btn-sm">Extras</a>
+
+                                <script>
+                                  var chicles = [
+                                    codigo_chicles = "00010",
+                                    Descripcion_chicles = "Chicles",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$5.00"
+                                  ];
+
+                                  var cafe = [
+                                    codigo_cafe = "00011",
+                                    Descripcion_cafe = "Café a su gusto",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$15.00"
+                                  ];
+
+                                  var Cono_helado_vainilla = [
+                                    codigo_helado = "00012",
+                                    Descripcion_helado = "Cono de Helado sabor a Vainilla",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$!5.90"
+                                  ];
+                                </script>
+
+                                <!--VALORES PARA SERVICIOS---->
                                 <a class="btn btn-secondary btn-sm">Servicios</a>
+
+                                <script>
+                                var pago_telefonico = [
+                                  codigo_pagoTelefonico = "00013",
+                                  Desscripcion_pagoTel = "Pago de Linea Telefonica",
+                                  Cantidad = 1,
+                                  PrecioUnitario = "100.00"
+                                ];
+
+                                var servicio_agua = [
+                                  codigoServAgua = "00014",
+                                  Descripcion_pagoAgua = "Pago de Servicio Agua",
+                                  Cantidad = 1,
+                                  PrecioUnitario = "150.00"
+                                ];
+                                </script>
+
+                                <!--VALORES PARA OTROS------>
                                 <a class="btn btn-secondary btn-sm">Otros</a>
+
+                                <script>
+                                  var Pluma = [
+                                    codigo_Pluma = "00015",
+                                    Descripcion_pluma = "Pluma de tinta negra",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$10.00"
+                                  ];
+
+                                  var memoriaUSB = [
+                                    codigo_memUSB = "00016",
+                                    Descripcion_memUSB = "Memoria USB 32 GB",
+                                    Cantidad = 1,
+                                    PrecioUnitario = "$100.00"
+                                  ];
+                                </script>
                             </h3>
-                          </div>                        
+                          </div>
                         <div class="card-body o-auto" style="height: 20rem">
                             <table class="table card-table">
                                 <tbody><tr>
@@ -233,7 +396,19 @@
                             <div class="card-options">
                                 <form action="">
                                   <div class="input-group">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Introducir código..." name="s">
+                                    <input type="text" class="form-control form-control-sm" class="busqueda" placeholder="Introducir código..." name="s">
+
+                                      <!--INTENTANDO QUE LOS CÓDIGOS DE BARRAS COINCIDAN Y AGREGAR UN NUEVO PRODUCTO-------->
+
+                                      <script>
+                                        if (busqueda == All_2) {
+                                          function(){
+
+                                          };
+                                        }
+                                      </script>
+
+
                                     <span class="input-group-btn ml-2">
                                       <button class="btn btn-sm btn-default" type="submit">
                                         <span class="fe fe-search"></span>
@@ -243,6 +418,7 @@
                                 </form>
                               </div>
                         </div>
+                        <!--LISTA DE LOS PRODUCTOS SELECCIONADOS------->
                         <div class="card-body">
                           <div class="table-responsive">
                               <table class="table card-table table-vcenter text-nowrap">
@@ -266,15 +442,36 @@
                                       <td class="text-right">$15.00</td>
                                       <td class="text-right">0%</td>
                                       <td class="text-right">$1,875.00</td>
+                                      <!--BOTÓN PARA ACTUALIZAR LISTA------>
                                       <td>
-                                        <a class="icon" href="javascript:void(0)">
+                                        <a class="icon" class="editar" href="javascript:void(0)">
                                           <i class="fe fe-edit"></i>
                                         </a>
+                                        <!--OCUPO DETALLES DE COMO SERÍA AL EDITARLO------>
+                                        <script>
+                                          if (editar.onclick()) {
+                                            function(){
+
+                                            };
+                                          }
+                                        </script>
+
                                       </td>
+                                      <!--BOTÓN PARA ELIMINAR LISTA------->
                                       <td>
-                                          <a class="icon" href="javascript:void(0)">
+                                          <a class="icon" class="eliminar" href="javascript:void(0)">
                                             <i class="fe fe-delete"></i>
                                           </a>
+
+                                          <script>
+                                          if (eliminar.onclick()) {
+                                            delete All_1;
+                                          }
+                                          else{
+                                            document.write("No se puede eliminar el articulo seleccionado");
+                                          }
+                                          </script>
+
                                         </td>
                                     </tr>
                                   </tbody>
@@ -325,7 +522,7 @@
                         <div class="card-body">
                           testing
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </div>
 
