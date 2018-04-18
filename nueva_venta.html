@@ -189,7 +189,7 @@
                                   <script>
                                     while (onload) {
                                         function(){
-
+                                          document.ready();
                                         };
                                     }
 
@@ -197,7 +197,9 @@
 
 
                                     //Intentando hacer un onclick en cada categoria
-                                    
+                                    if (Bebidas_1.onclick()) {
+                                      document.writeln(bebidas_tabla);
+                                    }
 
                                     //REALIZAR QUE CUANDO SE SELECCIONE LA CATEGORÍA DE ALIMENTOS APAREZCAN EN LA PRIMERA TABLA
                                     // Y DESPUÉS SU INFORMACIÓN ADICIONAL EN LA SEGUNDA
@@ -206,9 +208,11 @@
                                       document.write(ensaladapollo, hamburguesa, malteada);
                                     };
 
+                                    //Variable que engloba a todos los arrays
                                     var All_1 [ensaladapollo,hamburguesa,malteada,refresco_cola,limonada,espaguetti_bolonesa,
                                       pescado_salsa_verde,tamales,chicles,cafe,Cono_helado_vainilla,pago_telefonico,servicio_agua,Pluma,memoriaUSB];
 
+                                    //Variable que engloba a todos los codigos de barras de cada array
                                     var All_2 [codigo_ensaladaPollo,codigo_hamburguesa,codigo_malteada,codigo_refresco_cola,
                                       codigo_limonada,codigo_jugo_naranja,codigo_espaguettiBolonesa,codigo_pescadoSalsaVerde,codigo_tamales,
                                       codigo_chicles,codigo_cafe,codigo_helado,codigo_pagoTelefonico,codigoServAgua,codigo_Pluma,codigo_memUSB];
@@ -237,7 +241,29 @@
                                   </script>
 
 
-                                <a class="btn btn-secondary btn-sm">Bebidas</a>
+                                <a class="btn btn-secondary btn-sm" class="Bebidas_1">Bebidas</a>
+
+                                <!--Tabla especializada de Bebidas
+                                <div class="card-body o-auto" class="bebidas_tabla" style="height: 20rem">
+                                    <table class="table card-table">
+                                        <tbody><tr>
+                                          <td width="1"><span class="status-icon bg-success"></span></td>
+                                          <td>Refresco de Sabor CocaCola</td>
+                                          <td class="text-right"><span class="text-muted">$10.00</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><span class="status-icon bg-warning"></span></td>
+                                          <td>Limonada Natural</td>
+                                          <td class="text-right"><span class="text-muted">$15.00</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><span class="status-icon bg-danger"></span></i></td>
+                                          <td>Rico Jugo de Naranja</td>
+                                          <td class="text-right"><span class="text-muted">$13.00</span></td>
+                                        </tr>
+                                      </tbody></table>
+                                    </div>
+                                  --->
 
                                 <!---cREANDO LA INFORMACIÓN PARA LA CATEGORÍA BEBIDAS----->
                                 <script>
@@ -354,23 +380,26 @@
                                 </script>
                             </h3>
                           </div>
-                        <div class="card-body o-auto" style="height: 20rem">
+                        <div class="card-body o-auto" class="alimentos_tabla" style="height: 20rem">
                             <table class="table card-table">
                                 <tbody><tr>
                                   <td width="1"><span class="status-icon bg-success"></span></td>
-                                  <td>Coca-Cola Lata 50ml</td>
-                                  <td class="text-right"><span class="text-muted">$15.00</span></td>
+                                  <td>Ensalada de pollo</td>
+                                  <td class="text-right"><span class="text-muted">$25.00</span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-warning"></span></td>
-                                  <td>Pepsi botella</td>
-                                  <td class="text-right"><span class="text-muted">$8.50</span></td>
+                                  <td>Hamburguesa</td>
+                                  <td class="text-right"><span class="text-muted">$20.00</span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-danger"></span></i></td>
-                                  <td>Fanta lata</td>
-                                  <td class="text-right"><span class="text-muted">$12.5</span></td>
+                                  <td>Malteada de Fresa</td>
+                                  <td class="text-right"><span class="text-muted">$30.00</span></td>
                                 </tr>
+                              </tbody></table>
+                            </div>
+                                <!---
                                 <tr>
                                   <td><span class="status-icon bg-success"></span></td>
                                   <td>Coca-Cola Zero lata</td>
@@ -386,8 +415,7 @@
                                   <td>Agua Embotellada Ciel 500ml</td>
                                   <td class="text-right"><span class="text-muted">$16.50</span></td>
                                 </tr>
-                              </tbody></table>
-                        </div>
+                                ---->
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -424,8 +452,8 @@
                               <table class="table card-table table-vcenter text-nowrap">
                                   <thead>
                                     <tr>
-                                      <th class="w-1">CODIGO</th>
-                                      <th class="w-2">DESCRIPCION</th>
+                                      <th class="w-1">CÓDIGO</th>
+                                      <th class="w-2">DESCRIPCIÓN</th>
                                       <th class="text-right">CANTIDAD</th>
                                       <th class="text-right">PRECIO UNITARIO</th>
                                       <th class="text-right">DESCUENTO</th>
@@ -436,9 +464,11 @@
                                   </thead>
                                   <tbody>
                                     <tr>
+
+                                      <!---Pantalla 2--->
                                       <td><span class="text-muted">001401</span></td>
                                       <td><span class="text-muted">Tornillos de Madera</span></td>
-                                      <td class="text-right">125</td>
+                                      <td class="text-right">1</td>
                                       <td class="text-right">$15.00</td>
                                       <td class="text-right">0%</td>
                                       <td class="text-right">$1,875.00</td>
@@ -463,6 +493,7 @@
                                             <i class="fe fe-delete"></i>
                                           </a>
 
+                                          <!---Necesito corregir esta sentencia---->
                                           <script>
                                           if (eliminar.onclick()) {
                                             delete All_1;
@@ -508,20 +539,37 @@
                       </div>
                     </div>
                 </div>
+
+                <!--CAMBIAR EL CONTENIDO DE SUBTOTAL, IVA Y EL TOTAL, OSEA SE VA A CALCULAR---->
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-header">
-                          <h4>Subtotal:</h4>
+                        <div class="card-header" class="subtotal">
+                          <h4>Subtotal: </h4>
                         </div>
-                        <div class="card-header">
-                          <h4>IVA 16%:</h4>
+                        <div class="card-header" class="iva">
+                          <h4>IVA 16%: </h4>
                         </div>
-                        <div class="card-header">
-                          <h4>Total:</h4>
+                        <div class="card-header" class="total">
+                          <h4>Total: </h4>
                         </div>
                         <div class="card-body">
                           testing
                         </div>
+
+                        <!---Precio Unitario * Cantidad--->
+                        <script>
+
+                        </script>
+
+                        <!---Como realizar el subtotal--->
+                        <script>
+                        while(subtotal == int){
+                          function(){
+                            //precio unitario * cantidad, después subtotal * iva, ese resultado se imprime en el total.
+                          };
+                        }
+                        </script>
+
                     </div>
                 </div>
             </div>
