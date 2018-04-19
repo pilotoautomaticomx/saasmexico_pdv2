@@ -183,91 +183,238 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                <a class="btn btn-secondary btn-sm" class="Alimentos_1">Alimentos</a>
+                                <a class="btn btn-secondary btn-sm" onclick="ApareceAlimento()">Alimentos</a>
 
                                   <!--INTENTANDO REALIZAR QUE LA PAGINA CUANDO SE CARGE APAREZCA POR DEFAULT LA CATEGORIA ALIMENTO------->
                                   <script>
-                                    while (onload) {
-                                        function(){
-                                          document.ready();
-                                        };
+                                    function ApareceAlimento(){
+                                      //Mostrar el contenido de la tabla, en especial de la categoria alimentos
                                     }
 
-                                    onload="function(Default_cargaAlimento)";
+                                    window.onload = ApareceAlimento;
 
+                                    function ApareceExtras(){
 
-                                    //Intentando hacer un onclick en cada categoria
-                                    if (Bebidas_1.onclick()) {
-                                      document.writeln(bebidas_tabla);
+                                    }
+
+                                    function ApareceOtros(){
+
+                                    }
+
+                                    function ApareceBebidas(){
+
+                                    }
+
+                                    function AparecePlatillos(){
+
+                                    }
+
+                                    function ApareceServicios(){
+
                                     }
 
                                     //REALIZAR QUE CUANDO SE SELECCIONE LA CATEGORÍA DE ALIMENTOS APAREZCAN EN LA PRIMERA TABLA
                                     // Y DESPUÉS SU INFORMACIÓN ADICIONAL EN LA SEGUNDA
-                                    Alimentos_1.onclick=function(){
 
-                                      document.write(ensaladapollo, hamburguesa, malteada);
+                                    //Para todos los onclick's???
+                                    ApareceAlimento(){
+                                      //O más bien la tabla 1 pero con los datos de la categoria alimento
+                                      document.write(ensaladapollo,hamburguesa,malteada);
                                     };
 
-                                    //Variable que engloba a todos los arrays
-                                    var All_1 [ensaladapollo,hamburguesa,malteada,refresco_cola,limonada,espaguetti_bolonesa,
-                                      pescado_salsa_verde,tamales,chicles,cafe,Cono_helado_vainilla,pago_telefonico,servicio_agua,Pluma,memoriaUSB];
-
-                                    //Variable que engloba a todos los codigos de barras de cada array
-                                    var All_2 [codigo_ensaladaPollo,codigo_hamburguesa,codigo_malteada,codigo_refresco_cola,
-                                      codigo_limonada,codigo_jugo_naranja,codigo_espaguettiBolonesa,codigo_pescadoSalsaVerde,codigo_tamales,
-                                      codigo_chicles,codigo_cafe,codigo_helado,codigo_pagoTelefonico,codigoServAgua,codigo_Pluma,codigo_memUSB];
-
                                     //DECLARANDO ARRAYS PARA LA CATEGORIA ALIMENTOS
-                                    var ensaladapollo = [
-                                      codigo_ensaladaPollo = "00001",
-                                      Descripcion_ensaladaPollo = "Ensalada de pollo",
-                                      Cantidad = 1,
-                                      PrecioUnitario = "$25.00"
-                                    ];
+                                    //LO MANEJARÉ POR CLASES, CREO QUE ES MAS PRACTICO 19/04/18
+                                    class Ensalada_pollo {
+                                      constructor(codigo_ensaladaPollo,Descripcion_ensaladaPollo,cantidad,PrecioUnitario) {
+                                        this.codigo_ensaladaPollo = codigo_ensaladaPollo;
+                                        this.Descripcion_ensaladaPollo = Descripcion_ensaladaPollo;
+                                        this.Cantidad = Cantidad;
+                                        this.PrecioUnitario = PrecioUnitario;
+                                      }
 
-                                    var hamburguesa = [
-                                      codigo_hamburguesa = "00002",
-                                      Descripcion_hamburguesa = "Hamburguesa",
-                                      Cantidad = 1,
-                                      PrecioUnitario = "$20.00"
-                                    ];
+                                      get codigo_ensaladaPollo(){
+                                        return this.codigo_ensaladaPollo;
+                                      }
 
-                                    var malteada = [
+                                      get Descripcion_ensaladaPollo(){
+                                        return this.Descripcion_ensaladaPollo;
+                                      }
+
+                                      get Cantidad(){
+                                        return this.Cantidad;
+                                      }
+
+                                      get PrecioUnitario(){
+                                        return this.PrecioUnitario;
+                                      }
+                                    }
+
+                                    var ensaladapollo = new Ensalada_pollo(00001,"Ensalada de Pollo", 1, 20.00);
+
+                                    //var ensaladapollo = [
+                                      //codigo_ensaladaPollo = "00001",
+                                      //Descripcion_ensaladaPollo = "Ensalada de pollo",
+                                      //Cantidad = 1,
+                                      //PrecioUnitario = "$25.00"
+                                    //];
+
+                                    class Hamburguesa {
+                                      constructor(codigo_hamburguesa,Descripcion_hamburguesa,Cantidad,PrecioUnitario) {
+                                        this.codigo_hamburguesa = codigo_hamburguesa;
+                                        this.Descripcion_hamburguesa = Descripcion_hamburguesa;
+                                        this.Cantidad = Cantidad;
+                                        this.PrecioUnitario = PrecioUnitario;
+                                      }
+
+                                      get codigo_hamburguesa(){
+                                        return this.codigo_hamburguesa;
+                                      }
+
+                                      get Descripcion_hamburguesa(){
+                                        return this.Descripcion_hamburguesa;
+                                      }
+
+                                      get Cantidad(){
+                                        return this.Cantidad;
+                                      }
+
+                                      get PrecioUnitario(){
+                                        return this.PrecioUnitario;
+                                      }
+                                    }
+
+                                    var hamburguesa = new Hamburguesa(00002, "Hamburguesa de Res", 1, 25.00);
+
+                                    //var hamburguesa = [
+                                      //codigo_hamburguesa = "00002",
+                                      //Descripcion_hamburguesa = "Hamburguesa",
+                                      //Cantidad = 1,
+                                      //PrecioUnitario = "$20.00"
+                                    //];
+
+                                    class Malteada {
+                                      constructor(codigo_malteada,Descripcion_malteada,Cantidad,PrecioUnitario) {
+                                        this.codigo_malteada = codigo_malteada;
+                                        this.Descripcion_malteada = Descripcion_malteada;
+                                        this.Cantidad = Cantidad;
+                                        this.PrecioUnitario = PrecioUnitario;
+                                      }
+
+                                      get codigo_malteada(){
+                                        return this.codigo_malteada;
+                                      }
+
+                                      get Descripcion_malteada(){
+                                        return this.Descripcion_malteada;
+                                      }
+
+                                      get Cantidad(){
+                                        return this.Cantidad;
+                                      }
+
+                                      get PrecioUnitario(){
+                                        return this.PrecioUnitario;
+                                      }
+                                    }
+
+                                    var malteada = new Malteada(00003, "Malteada de Fresa", 1, 20.00);
+
+                                    /*var malteada = [
                                       codigo_malteada = "00003",
                                       Descripcion_malteada = "Malteada de Fresa",
                                       Cantidad = 1,
                                       PrecioUnitario = "$30.00"
-                                    ];
+                                    ];*/
                                   </script>
 
+                                <a class="btn btn-secondary btn-sm" onclick="ApareceBebidas()">Bebidas</a>
 
-                                <a class="btn btn-secondary btn-sm" class="Bebidas_1">Bebidas</a>
-
-                                <!--Tabla especializada de Bebidas
-                                <div class="card-body o-auto" class="bebidas_tabla" style="height: 20rem">
-                                    <table class="table card-table">
-                                        <tbody><tr>
-                                          <td width="1"><span class="status-icon bg-success"></span></td>
-                                          <td>Refresco de Sabor CocaCola</td>
-                                          <td class="text-right"><span class="text-muted">$10.00</span></td>
-                                        </tr>
-                                        <tr>
-                                          <td><span class="status-icon bg-warning"></span></td>
-                                          <td>Limonada Natural</td>
-                                          <td class="text-right"><span class="text-muted">$15.00</span></td>
-                                        </tr>
-                                        <tr>
-                                          <td><span class="status-icon bg-danger"></span></i></td>
-                                          <td>Rico Jugo de Naranja</td>
-                                          <td class="text-right"><span class="text-muted">$13.00</span></td>
-                                        </tr>
-                                      </tbody></table>
-                                    </div>
-                                  --->
-
-                                <!---cREANDO LA INFORMACIÓN PARA LA CATEGORÍA BEBIDAS----->
+                                <!---CREANDO LA INFORMACIÓN PARA LA CATEGORÍA BEBIDAS----->
+                                <!--LAS CLASES DE BEBIDAS---->
                                 <script>
-                                  var refresco_cola = [
+
+                                class Refresco_Coca {
+                                  constructor(codigo_refresco_cola,Descripcion_refresco_cola,Cantidad,PrecioUnitario) {
+                                    this.codigo_refresco_cola = codigo_refresco_cola;
+                                    this.Descripcion_refresco_cola = Descripcion_refresco_cola;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_refresco_cola(){
+                                    return this.codigo_refresco_cola;
+                                  }
+
+                                  get Descripcion_refresco_cola(){
+                                    return this.Descripcion_refresco_cola;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var refresco_coca = new Refresco_Coca(00004, "Refresco Sabor Coca-Cola", 1, 10.00);
+
+                                class Limonada {
+                                  constructor(codigo_limonada,Descripcion_limonada,Cantidad,PrecioUnitario) {
+                                    this.codigo_limonada = codigo_limonada;
+                                    this.Descripcion_limonada = Descripcion_limonada;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_limonada(){
+                                    return this.codigo_limonada;
+                                  }
+
+                                  get Descripcion_limonada(){
+                                    return this.Descripcion_limonada;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var limonada = new Limonada(00005, "Limonada Natural", 1, 12.00);
+
+                                class Jugo_Naranja {
+                                  constructor(codigo_jugo_naranja,Descripcion_jugo_naranja,Cantidad,PrecioUnitario) {
+                                    this.codigo_jugo_naranja = codigo_jugo_naranja;
+                                    this.Descripcion_jugo_naranja = Descripcion_jugo_naranja;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_jugo_naranja(){
+                                    return this.codigo_jugo_naranja;
+                                  }
+
+                                  get Descripcion_jugo_naranja(){
+                                    return this.Descripcion_jugo_naranja;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var jugoNaranja = new Jugo_Naranja(00006, "Jugo de Naranja", 1, 13.00);
+
+                                  /*var refresco_cola = [
                                     codigo_refresco_cola = "00004",
                                     Descripcion_refresco_cola = "Refresco de Sabor CocaCola",
                                     Cantidad = 1,
@@ -286,14 +433,96 @@
                                     Descripcion_jugo_naranja = "Rico Jugo de Naranja",
                                     Cantidad = 1,
                                     PrecioUnitario = "$13.00"
-                                  ];
+                                  ];*/
                                 </script>
 
-                                <a class="btn btn-secondary btn-sm">Platillos</a>
+                                <a class="btn btn-secondary btn-sm" onclick="AparecePlatillos()">Platillos</a>
 
                                 <!--Creando LA INFORMACIÓN DE LOS PLATILLOS A ESCOGER----->
+                                <!--CLASES DE PLATILLOS----->
                                 <script>
-                                  var espaguetti_bolonesa = [
+                                class Espaguetti_Bolonesa {
+                                  constructor(codigo_espaguettiBolonesa,Descripcion_espaguettiBolonesa,Cantidad,PrecioUnitario) {
+                                    this.codigo_espaguettiBolonesa = codigo_espaguettiBolonesa;
+                                    this.Descripcion_espaguettiBolonesa = Descripcion_espaguettiBolonesa;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_espaguettiBolonesa(){
+                                    return this.codigo_espaguettiBolonesa;
+                                  }
+
+                                  get Descripcion_espaguettiBolonesa(){
+                                    return this.Descripcion_espaguettiBolonesa;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var espaguetti_bolonesa = new Espaguetti_Bolonesa(00007, "Espaguetti a la Boloñesa", 1, 25.00);
+
+                                class Pescado_SalaV {
+                                  constructor(codigo_pescadoSalsaVerde,Descripcion_pescadoSalsaVerde,Cantidad,PrecioUnitario) {
+                                    this.codigo_pescadoSalsaVerde = codigo_pescadoSalsaVerde;
+                                    this.Descripcion_pescadoSalsaVerde = Descripcion_pescadoSalsaVerde;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_pescadoSalsaVerde(){
+                                    return this.codigo_pescadoSalsaVerde;
+                                  }
+
+                                  get Descripcion_pescadoSalsaVerde(){
+                                    return this.Descripcion_pescadoSalsaVerde;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var pescado_salsa_verde = new Pescado_SalaV(00008,"Pescado en Salsa Verde", 1, 40.00);
+
+                                class Tamales {
+                                  constructor(codigo_tamales,Descripcion_tamales,Cantidad,PrecioUnitario) {
+                                    this.codigo_tamales = codigo_tamales;
+                                    this.Descripcion_tamales = Descripcion_tamales;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_tamales(){
+                                    return this.codigo_tamales;
+                                  }
+
+                                  get Descripcion_tamales(){
+                                    return this.Descripcion_tamales;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var tamales = new Tamales(00009, "Tamales de Carne", 1, 30.00);
+
+                                  /*var espaguetti_bolonesa = [
                                     codigo_espaguettiBolonesa = "00007",
                                     Descripcion_espaguettiBolonesa = "Espaguetti a la Boloñesa",
                                     Cantidad = 1,
@@ -312,14 +541,95 @@
                                     Descripcion_tamales = "Tamales de Carne con guarniciones",
                                     Cantidad = 1,
                                     PrecioUnitario = "$35.00"
-                                  ];
+                                  ];*/
                                 </script>
 
-                                <!--VALORES PARA EXTRAS------->
-                                <a class="btn btn-secondary btn-sm">Extras</a>
+                                <!--VALORES PARA EXTRAS----->
+                                <!--CREANDO CLASES de EXTRAS---->
+                                <a class="btn btn-secondary btn-sm" onclick="ApareceExtras()">Extras</a>
 
                                 <script>
-                                  var chicles = [
+                                class Chicles {
+                                  constructor(codigo_chicles,Descripcion_chicles,Cantidad,PrecioUnitario) {
+                                    this.codigo_chicles = codigo_chicles;
+                                    this.Descripcion_chicles = Descripcion_chicles;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_chicles(){
+                                    return this.codigo_chicles;
+                                  }
+
+                                  get Descripcion_chicles(){
+                                    return this.Descripcion_chicles;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var chicles = new Chicles(00010,"Chicles Economicos",1,5.00);
+
+                                class Cafe {
+                                  constructor(codigo_cafe,Descripcion_cafe,Cantidad,PrecioUnitario) {
+                                    this.codigo_cafe = codigo_cafe;
+                                    this.Descripcion_cafe = Descripcion_cafe;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_cafe(){
+                                    return this.codigo_cafe;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Descripcion_cafe;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var cafesito = new Cafe(00011,"Café al Gusto",1,25.00)
+
+                                class Cono_Helado_Vainilla {
+                                  constructor(codigo_helado,Descripcion_helado,Cantidad,PrecioUnitario) {
+                                    this.codigo_helado = codigo_helado;
+                                    this.Descripcion_helado = Descripcion_helado;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_helado(){
+                                    return this.codigo_helado;
+                                  }
+
+                                  get Descripcion_helado(){
+                                    return this.Descripcion_helado;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var cono_helado = new Cono_Helado_Vainilla(00012,"Cono de Helado Vainilla", 1, 15.00);
+                                  /*var chicles = [
                                     codigo_chicles = "00010",
                                     Descripcion_chicles = "Chicles",
                                     Cantidad = 1,
@@ -338,16 +648,70 @@
                                     Descripcion_helado = "Cono de Helado sabor a Vainilla",
                                     Cantidad = 1,
                                     PrecioUnitario = "$!5.90"
-                                  ];
+                                  ];*/
                                 </script>
 
                                 <!--VALORES PARA SERVICIOS---->
-                                <a class="btn btn-secondary btn-sm">Servicios</a>
-
+                                <a class="btn btn-secondary btn-sm" onclick="ApareceServicios()">Servicios</a>
+                                <!--CLASES PARA SERVICIOS----->
                                 <script>
-                                var pago_telefonico = [
+
+                                class Pago_Telefonico {
+                                  constructor(codigo_pagoTelefonico,Descripcion_pagoTel,Cantidad,PrecioUnitario) {
+                                    this.codigo_pagoTelefonico = codigo_pagoTelefonico;
+                                    this.Descripcion_pagoTel = Descripcion_pagoTel;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_pagoTelefonico(){
+                                    return this.codigo_pagoTelefonico;
+                                  }
+
+                                  get Descripcion_pagoTel(){
+                                    return this.Descripcion_pagoTel;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var pagotel = new Pago_Telefonico(00013, "Pago de Línea Telefonica", 1, 140.00);
+
+                                class Servicio_Agua {
+                                  constructor(codigoServAgua,Descripcion_pagoAgua,Cantidad,PrecioUnitario) {
+                                    this.codigoServAgua = codigoServAgua;
+                                    this.Descripcion_pagoAgua = Descripcion_pagoAgua;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigoServAgua(){
+                                    return this.codigoServAgua;
+                                  }
+
+                                  get Descripcion_pagoAgua(){
+                                    return this.Descripcion_pagoAgua;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var pago_agua = new Servicio_Agua(00014,"Pago de Servicio del Agua",1,230.00);
+                                /*var pago_telefonico = [
                                   codigo_pagoTelefonico = "00013",
-                                  Desscripcion_pagoTel = "Pago de Linea Telefonica",
+                                  Descripcion_pagoTel = "Pago de Linea Telefonica",
                                   Cantidad = 1,
                                   PrecioUnitario = "100.00"
                                 ];
@@ -357,14 +721,68 @@
                                   Descripcion_pagoAgua = "Pago de Servicio Agua",
                                   Cantidad = 1,
                                   PrecioUnitario = "150.00"
-                                ];
+                                ];*/
                                 </script>
 
                                 <!--VALORES PARA OTROS------>
-                                <a class="btn btn-secondary btn-sm">Otros</a>
-
+                                <a class="btn btn-secondary btn-sm" onclick="ApareceOtros()">Otros</a>
+                                <!---Creando las clases----->
                                 <script>
-                                  var Pluma = [
+
+                                class Pluma {
+                                  constructor(codigo_Pluma,Descripcion_pluma,Cantidad,PrecioUnitario) {
+                                    this.codigo_Pluma = codigo_Pluma;
+                                    this.Descripcion_pluma = Descripcion_pluma;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_Pluma(){
+                                    return this.codigo_Pluma;
+                                  }
+
+                                  get Descripcion_pluma(){
+                                    return this.Descripcion_pluma;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.PrecioUnitario;
+                                  }
+                                }
+
+                                var pluma_negra = new Pluma(00015,"Pluma tinta negra",1,12.00);
+
+                                class Memoria_USB {
+                                  constructor(codigo_memUSB,Descripcion_memUSB,Cantidad,PrecioUnitario) {
+                                    this.codigo_memUSB = codigo_memUSB;
+                                    this.Descripcion_memUSB = Descripcion_memUSB;
+                                    this.Cantidad = Cantidad;
+                                    this.PrecioUnitario = PrecioUnitario;
+                                  }
+
+                                  get codigo_memUSB(){
+                                    return this.codigo_memUSB;
+                                  }
+
+                                  get Descripcion_memUSB(){
+                                    return this.Descripcion_memUSB;
+                                  }
+
+                                  get Cantidad(){
+                                    return this.Cantidad;
+                                  }
+
+                                  get PrecioUnitario(){
+                                    return this.Cantidad;
+                                  }
+                                }
+
+                                var Mem_Usb = new Memoria_USB(00016,"Memoria USB de 32 GB",1,200.00);
+                                  /*var Pluma = [
                                     codigo_Pluma = "00015",
                                     Descripcion_pluma = "Pluma de tinta negra",
                                     Cantidad = 1,
@@ -376,15 +794,27 @@
                                     Descripcion_memUSB = "Memoria USB 32 GB",
                                     Cantidad = 1,
                                     PrecioUnitario = "$100.00"
-                                  ];
+                                  ];*/
+
+                                var
                                 </script>
                             </h3>
                           </div>
-                        <div class="card-body o-auto" class="alimentos_tabla" style="height: 20rem">
+                        <div class="card-body o-auto" style="height: 20rem">
                             <table class="table card-table">
                                 <tbody><tr>
                                   <td width="1"><span class="status-icon bg-success"></span></td>
-                                  <td>Ensalada de pollo</td>
+
+                                  <!--Porque no funciona la llamada?--->
+                                  <!--Cuál será la correcta?
+                                    console.log(ensaladapollo.Descripcion_ensaladaPollo());
+                                    document.write(ensaladapollo.Descripcion_ensaladaPollo);
+
+
+                                    onclick, para hacerla como tipo boton y asi seleccionarla en la tabla 2
+                                  ------>
+                                  <td onclick="EnsaladaPollo_Seleccionada()"><script></script>Ensalada de Pollo</td>
+
                                   <td class="text-right"><span class="text-muted">$25.00</span></td>
                                 </tr>
                                 <tr>
@@ -429,9 +859,9 @@
                                       <!--INTENTANDO QUE LOS CÓDIGOS DE BARRAS COINCIDAN Y AGREGAR UN NUEVO PRODUCTO-------->
 
                                       <script>
-                                        if (busqueda == All_2) {
+                                        if (busqueda = Mem_Usb.codigo_memUSB) {
                                           function(){
-
+                                            //Agregar a la tabla 2
                                           };
                                         }
                                       </script>
@@ -464,6 +894,22 @@
                                   </thead>
                                   <tbody>
                                     <tr>
+                                      <!--Para poner una row según el producto
+                                        console.log(ensaladapollo.codigo_ensaladaPollo());
+                                        document.write(ensaladapollo.codigo_ensaladaPollo);
+                                      --->
+                                      <script>
+                                      function EnsaladaPollo_Seleccionada(){
+                                        document.write(
+                                          "<td><span class=\"text-muted\"><\/span><\/td>"
+                                          "<td><span class=\"text-muted\"><\/span><\/td>"
+                                          "<td class=\"text-right\"><\/td>"
+                                          "<td class=\"text-right\"><\/td>"
+                                          "<td class=\"text-right\"><\/td>"
+                                          "<td class=\"text-right\"><\/td>");
+                                      }
+                                      </script>
+
 
                                       <!---Pantalla 2--->
                                       <td><span class="text-muted">001401</span></td>
@@ -472,6 +918,8 @@
                                       <td class="text-right">$15.00</td>
                                       <td class="text-right">0%</td>
                                       <td class="text-right">$1,875.00</td>
+
+
                                       <!--BOTÓN PARA ACTUALIZAR LISTA------>
                                       <td>
                                         <a class="icon" class="editar" href="javascript:void(0)">
@@ -481,7 +929,7 @@
                                         <script>
                                           if (editar.onclick()) {
                                             function(){
-
+                                              //poner un text area para poder cambiar el numero de la cantidad???
                                             };
                                           }
                                         </script>
@@ -493,13 +941,15 @@
                                             <i class="fe fe-delete"></i>
                                           </a>
 
-                                          <!---Necesito corregir esta sentencia---->
+                                          <!---Necesito corregir esta sentencia      Falta algo?---->
                                           <script>
+                                          var eliminar_fila = new eliminar();
+
                                           if (eliminar.onclick()) {
-                                            delete All_1;
+                                            deleteRow(eliminar_fila);
                                           }
                                           else{
-                                            document.write("No se puede eliminar el articulo seleccionado");
+                                            alert("No se puede eliminar el articulo seleccionado");
                                           }
                                           </script>
 
@@ -556,18 +1006,57 @@
                           testing
                         </div>
 
-                        <!---Precio Unitario * Cantidad--->
+                        <!---Precio Unitario * Cantidad     Para cada una?--->
                         <script>
+                          class subtotal {
+                            constructor(PrecioUnitario,Cantidad) {
+                              this.PrecioUnitario = PrecioUnitario;
+                              this.Cantidad = Cantidad;
+                            }
+
+                            get Elsubtotal(){
+                              return this.calcular();
+                            }
+                            calcular(){
+                              return this.PrecioUnitario * this.Cantidad;
+                            }
+                          }
+
+                          var Subtotal_Ensalada = new subtotal(ensaladapollo.Cantidad,ensaladapollo.PrecioUnitario);
+
+                          //Para mostrarlos console.log(Subtotal_Ensalada.Elsubtotal);
 
                         </script>
 
-                        <!---Como realizar el subtotal--->
+                        <!---Como realizar el subtotal    Unicamente para la ensalada?--->
+                        <!---Espero que funcione....----->
                         <script>
-                        while(subtotal == int){
-                          function(){
-                            //precio unitario * cantidad, después subtotal * iva, ese resultado se imprime en el total.
-                          };
-                        }
+                          //precio unitario * cantidad, después subtotal * iva, ese resultado se imprime en el total.
+                          class Iva_Subtotal {
+                            constructor(Subtotal_Ensalada) {
+                              this.Subtotal_Ensalada = Subtotal_Ensalada;
+                            }
+
+                            get El_iva(){
+                              return this.iva();
+                            }
+
+                            iva(){
+                              return this.Subtotal_Ensalada * 0.16;
+                            }
+
+                            get total(){
+                              return this.total();
+                            }
+
+                            total(){
+                              return this.Subtotal_Ensalada + this.iva;
+                            }
+                          }
+
+                          var Iva = new Iva_Subtotal();
+                          //Para mostrarlos console.log(Subtotal_Ensalada.Elsubtotal);
+
                         </script>
 
                     </div>
