@@ -189,7 +189,8 @@
                                   <script>
                                     function ApareceAlimento(){
                                       //Mostrar el contenido de la tabla, en especial de la categoria alimentos
-                                      //console.log(newobjeto.funciondelcontenido);  -- podría funcionar
+                                      //getElementById('id'); con algo más y funcionará..
+
                                     }
 
                                     window.onload = ApareceAlimento();
@@ -226,34 +227,9 @@
                                         this.Cantidad = cantidad;
                                         this.PrecioUnitario = PrecioUnitario;
                                       }
-
-                                      /*
-                                      get codigo_ensaladaPollo(){
-                                        return this.codigo_ensaladaPollo;
-                                      }
-
-                                      get Descripcion_ensaladaPollo(){
-                                        return this.Descripcion_ensaladaPollo;
-                                      }
-
-                                      get Cantidad(){
-                                        return this.Cantidad;
-                                      }
-
-                                      get PrecioUnitario(){
-                                        return this.PrecioUnitario;
-                                      }
-                                      */
                                     }
 
                                     var ensaladapollo = new Ensalada_pollo(00001, "Ensalada de Pollo", 1, 20.00);
-
-                                    //var ensaladapollo = [
-                                      //codigo_ensaladaPollo = "00001",
-                                      //Descripcion_ensaladaPollo = "Ensalada de pollo",
-                                      //Cantidad = 1,
-                                      //PrecioUnitario = "$25.00"
-                                    //];
 
                                     class Hamburguesa {
                                       constructor(codigo_hamburguesa,Descripcion_hamburguesa,Cantidad,PrecioUnitario) {
@@ -262,34 +238,9 @@
                                         this.Cantidad = Cantidad;
                                         this.PrecioUnitario = PrecioUnitario;
                                       }
-                                      
-                                      /*
-                                      get codigo_hamburguesa(){
-                                        return this.codigo_hamburguesa;
-                                      }
-
-                                      get Descripcion_hamburguesa(){
-                                        return this.Descripcion_hamburguesa;
-                                      }
-
-                                      get Cantidad(){
-                                        return this.Cantidad;
-                                      }
-
-                                      get PrecioUnitario(){
-                                        return this.PrecioUnitario;
-                                      }
-                                      */
                                     }
 
                                     var hamburguesa = new Hamburguesa(00002, "Hamburguesa de Res", 1, 25.00);
-
-                                    //var hamburguesa = [
-                                      //codigo_hamburguesa = "00002",
-                                      //Descripcion_hamburguesa = "Hamburguesa",
-                                      //Cantidad = 1,
-                                      //PrecioUnitario = "$20.00"
-                                    //];
 
                                     class Malteada {
                                       constructor(codigo_malteada,Descripcion_malteada,Cantidad,PrecioUnitario) {
@@ -298,34 +249,9 @@
                                         this.Cantidad = Cantidad;
                                         this.PrecioUnitario = PrecioUnitario;
                                       }
-
-                                      /*
-                                      get codigo_malteada(){
-                                        return this.codigo_malteada;
-                                      }
-
-                                      get Descripcion_malteada(){
-                                        return this.Descripcion_malteada;
-                                      }
-
-                                      get Cantidad(){
-                                        return this.Cantidad;
-                                      }
-
-                                      get PrecioUnitario(){
-                                        return this.PrecioUnitario;
-                                      }
-                                      */
                                     }
 
                                     var malteada = new Malteada(00003, "Malteada de Fresa", 1, 20.00);
-
-                                    /*var malteada = [
-                                      codigo_malteada = "00003",
-                                      Descripcion_malteada = "Malteada de Fresa",
-                                      Cantidad = 1,
-                                      PrecioUnitario = "$30.00"
-                                    ];*/
                                   </script>
 
                                 <a class="btn btn-secondary btn-sm" onclick="ApareceBebidas()">Bebidas</a>
@@ -341,24 +267,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_refresco_cola(){
-                                    return this.codigo_refresco_cola;
-                                  }
-
-                                  get Descripcion_refresco_cola(){
-                                    return this.Descripcion_refresco_cola;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var refresco_coca = new Refresco_Coca(00004, "Refresco Sabor Coca-Cola", 1, 10.00);
@@ -370,24 +278,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_limonada(){
-                                    return this.codigo_limonada;
-                                  }
-
-                                  get Descripcion_limonada(){
-                                    return this.Descripcion_limonada;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var limonada = new Limonada(00005, "Limonada Natural", 1, 12.00);
@@ -399,48 +289,9 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_jugo_naranja(){
-                                    return this.codigo_jugo_naranja;
-                                  }
-
-                                  get Descripcion_jugo_naranja(){
-                                    return this.Descripcion_jugo_naranja;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var jugoNaranja = new Jugo_Naranja(00006, "Jugo de Naranja", 1, 13.00);
-
-                                  /*var refresco_cola = [
-                                    codigo_refresco_cola = "00004",
-                                    Descripcion_refresco_cola = "Refresco de Sabor CocaCola",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$10.00"
-                                  ];
-
-                                  var limonada = [
-                                    codigo_limonada = "00005",
-                                    Descripcion_limonada = "Limonada Natural",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$15.00"
-                                  ];
-
-                                  var jugo_naranja = [
-                                    codigo_jugo_naranja = "00006",
-                                    Descripcion_jugo_naranja = "Rico Jugo de Naranja",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$13.00"
-                                  ];*/
                                 </script>
 
                                 <a class="btn btn-secondary btn-sm" onclick="AparecePlatillos()">Platillos</a>
@@ -455,24 +306,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_espaguettiBolonesa(){
-                                    return this.codigo_espaguettiBolonesa;
-                                  }
-
-                                  get Descripcion_espaguettiBolonesa(){
-                                    return this.Descripcion_espaguettiBolonesa;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var espaguetti_bolonesa = new Espaguetti_Bolonesa(00007, "Espaguetti a la Boloñesa", 1, 25.00);
@@ -484,24 +317,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_pescadoSalsaVerde(){
-                                    return this.codigo_pescadoSalsaVerde;
-                                  }
-
-                                  get Descripcion_pescadoSalsaVerde(){
-                                    return this.Descripcion_pescadoSalsaVerde;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var pescado_salsa_verde = new Pescado_SalaV(00008,"Pescado en Salsa Verde", 1, 40.00);
@@ -513,48 +328,9 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_tamales(){
-                                    return this.codigo_tamales;
-                                  }
-
-                                  get Descripcion_tamales(){
-                                    return this.Descripcion_tamales;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var tamales = new Tamales(00009, "Tamales de Carne", 1, 30.00);
-
-                                  /*var espaguetti_bolonesa = [
-                                    codigo_espaguettiBolonesa = "00007",
-                                    Descripcion_espaguettiBolonesa = "Espaguetti a la Boloñesa",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$30.00"
-                                  ];
-
-                                  var pescado_salsa_verde = [
-                                    codigo_pescadoSalsaVerde = "00008",
-                                    Descripcion_pescadoSalsaVerde = "Pescado bañado en salsa verde",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$40.00"
-                                  ];
-
-                                  var tamales = [
-                                    codigo_tamales = "00009",
-                                    Descripcion_tamales = "Tamales de Carne con guarniciones",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$35.00"
-                                  ];*/
                                 </script>
 
                                 <!--VALORES PARA EXTRAS-->
@@ -569,24 +345,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_chicles(){
-                                    return this.codigo_chicles;
-                                  }
-
-                                  get Descripcion_chicles(){
-                                    return this.Descripcion_chicles;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var chicles = new Chicles(00010,"Chicles Economicos",1,5.00);
@@ -598,24 +356,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_cafe(){
-                                    return this.codigo_cafe;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Descripcion_cafe;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var cafesito = new Cafe(00011,"Café al Gusto",1,25.00)
@@ -627,47 +367,10 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_helado(){
-                                    return this.codigo_helado;
-                                  }
-
-                                  get Descripcion_helado(){
-                                    return this.Descripcion_helado;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var cono_helado = new Cono_Helado_Vainilla(00012,"Cono de Helado Vainilla", 1, 15.00);
-                                  /*var chicles = [
-                                    codigo_chicles = "00010",
-                                    Descripcion_chicles = "Chicles",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$5.00"
-                                  ];
 
-                                  var cafe = [
-                                    codigo_cafe = "00011",
-                                    Descripcion_cafe = "Café a su gusto",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$15.00"
-                                  ];
-
-                                  var Cono_helado_vainilla = [
-                                    codigo_helado = "00012",
-                                    Descripcion_helado = "Cono de Helado sabor a Vainilla",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$!5.90"
-                                  ];*/
                                 </script>
 
                                 <!--VALORES PARA SERVICIOS-->
@@ -682,24 +385,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_pagoTelefonico(){
-                                    return this.codigo_pagoTelefonico;
-                                  }
-
-                                  get Descripcion_pagoTel(){
-                                    return this.Descripcion_pagoTel;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var pagotel = new Pago_Telefonico(00013, "Pago de Línea Telefonica", 1, 140.00);
@@ -711,40 +396,9 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigoServAgua(){
-                                    return this.codigoServAgua;
-                                  }
-
-                                  get Descripcion_pagoAgua(){
-                                    return this.Descripcion_pagoAgua;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var pago_agua = new Servicio_Agua(00014,"Pago de Servicio del Agua",1,230.00);
-                                /*var pago_telefonico = [
-                                  codigo_pagoTelefonico = "00013",
-                                  Descripcion_pagoTel = "Pago de Linea Telefonica",
-                                  Cantidad = 1,
-                                  PrecioUnitario = "100.00"
-                                ];
-
-                                var servicio_agua = [
-                                  codigoServAgua = "00014",
-                                  Descripcion_pagoAgua = "Pago de Servicio Agua",
-                                  Cantidad = 1,
-                                  PrecioUnitario = "150.00"
-                                ];*/
                                 </script>
 
                                 <!--VALORES PARA OTROS-->
@@ -759,24 +413,6 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_Pluma(){
-                                    return this.codigo_Pluma;
-                                  }
-
-                                  get Descripcion_pluma(){
-                                    return this.Descripcion_pluma;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.PrecioUnitario;
-                                  }
-                                  */
                                 }
 
                                 var pluma_negra = new Pluma(00015,"Pluma tinta negra",1,12.00);
@@ -788,69 +424,28 @@
                                     this.Cantidad = Cantidad;
                                     this.PrecioUnitario = PrecioUnitario;
                                   }
-
-                                  /*
-                                  get codigo_memUSB(){
-                                    return this.codigo_memUSB;
-                                  }
-
-                                  get Descripcion_memUSB(){
-                                    return this.Descripcion_memUSB;
-                                  }
-
-                                  get Cantidad(){
-                                    return this.Cantidad;
-                                  }
-
-                                  get PrecioUnitario(){
-                                    return this.Cantidad;
-                                  }
-                                  */
                                 }
 
                                 var Mem_Usb = new Memoria_USB(00016,"Memoria USB de 32 GB",1,200.00);
-                                  /*var Pluma = [
-                                    codigo_Pluma = "00015",
-                                    Descripcion_pluma = "Pluma de tinta negra",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$10.00"
-                                  ];
-
-                                  var memoriaUSB = [
-                                    codigo_memUSB = "00016",
-                                    Descripcion_memUSB = "Memoria USB 32 GB",
-                                    Cantidad = 1,
-                                    PrecioUnitario = "$100.00"
-                                  ];*/
-
                                 </script>
                             </h3>
                           </div>
-                        <div class="card-body o-auto" style="height: 20rem">
+                        <div class="card-body o-auto"  id="tabla_productos_alimentos" style="height: 20rem">
                             <table class="table card-table">
                                 <tbody><tr>
                                   <td width="1"><span class="status-icon bg-success"></span></td>
-
-                                  <!--Porque no funciona la llamada?-->
-                                  <!--Cuál será la correcta?
-                                    console.log(ensaladapollo.Descripcion_ensaladaPollo);
-                                    document.write(ensaladapollo.Descripcion_ensaladaPollo);
-
-
-                                    onclick, para hacerla como tipo boton y asi seleccionarla en la tabla 2
-                                  -->
-                                  <td onclick="EnsaladaPollo_Seleccionada()"><script>console.log(ensaladapollo.Descripcion_ensaladaPollo);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>console.log(ensaladapollo.PrecioUnitario);</script></span></td>
+                                  <td><script>document.write(ensaladapollo.Descripcion_ensaladaPollo);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(ensaladapollo.PrecioUnitario);</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-warning"></span></td>
-                                  <td onclick="Hamburguesa_Seleccionada()"><script>console.log(hamburguesa.Descripcion_hamburguesa);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>console.log(hamburguesa.PrecioUnitario);</script></span></td>
+                                  <td><script>document.write(hamburguesa.Descripcion_hamburguesa);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(hamburguesa.PrecioUnitario);</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-danger"></span></i></td>
-                                  <td onclick="Malteada_Seleccionada()"><script>console.log(malteada.Descripcion_malteada);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>console.log(malteada.PrecioUnitario);</script></span></td>
+                                  <td><script>document.write(malteada.Descripcion_malteada);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(malteada.PrecioUnitario);</script></span></td>
                                 </tr>
                               </tbody></table>
                             </div>
