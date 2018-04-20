@@ -189,9 +189,10 @@
                                   <script>
                                     function ApareceAlimento(){
                                       //Mostrar el contenido de la tabla, en especial de la categoria alimentos
+                                      //console.log(newobjeto.funciondelcontenido);  -- podría funcionar
                                     }
 
-                                    window.onload = ApareceAlimento;
+                                    window.onload = ApareceAlimento();
 
                                     function ApareceExtras(){
 
@@ -214,13 +215,7 @@
                                     }
 
                                     //REALIZAR QUE CUANDO SE SELECCIONE LA CATEGORÍA DE ALIMENTOS APAREZCAN EN LA PRIMERA TABLA
-                                    // Y DESPUÉS SU INFORMACIÓN ADICIONAL EN LA SEGUNDA
-
-                                    //Para todos los onclick's???
-                                    ApareceAlimento(){
-                                      //O más bien la tabla 1 pero con los datos de la categoria alimento
-                                      document.write(ensaladapollo,hamburguesa,malteada);
-                                    };
+                                    // Y DESPUÉS ya seleccionado el articulo, SU INFORMACIÓN ADICIONAL EN LA SEGUNDA
 
                                     //DECLARANDO ARRAYS PARA LA CATEGORIA ALIMENTOS
                                     //LO MANEJARÉ POR CLASES, CREO QUE ES MAS PRACTICO 19/04/18
@@ -249,7 +244,7 @@
                                       }
                                     }
 
-                                    var ensaladapollo = new Ensalada_pollo(00001,"Ensalada de Pollo", 1, 20.00);
+                                    var ensaladapollo = new Ensalada_pollo(00001, "Ensalada de Pollo", 1, 20.00);
 
                                     //var ensaladapollo = [
                                       //codigo_ensaladaPollo = "00001",
@@ -807,25 +802,24 @@
 
                                   <!--Porque no funciona la llamada?--->
                                   <!--Cuál será la correcta?
-                                    console.log(ensaladapollo.Descripcion_ensaladaPollo());
+                                    console.log(ensaladapollo.Descripcion_ensaladaPollo);
                                     document.write(ensaladapollo.Descripcion_ensaladaPollo);
 
 
                                     onclick, para hacerla como tipo boton y asi seleccionarla en la tabla 2
                                   ------>
-                                  <td onclick="EnsaladaPollo_Seleccionada()"><script></script>Ensalada de Pollo</td>
-
-                                  <td class="text-right"><span class="text-muted">$25.00</span></td>
+                                  <td onclick="EnsaladaPollo_Seleccionada()"><script>console.log(ensaladapollo.Descripcion_ensaladaPollo);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>console.log(ensaladapollo.PrecioUnitario);</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-warning"></span></td>
-                                  <td>Hamburguesa</td>
-                                  <td class="text-right"><span class="text-muted">$20.00</span></td>
+                                  <td onclick="Hamburguesa_Seleccionada()"><script>console.log(hamburguesa.Descripcion_hamburguesa);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>console.log(hamburguesa.PrecioUnitario);</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-danger"></span></i></td>
-                                  <td>Malteada de Fresa</td>
-                                  <td class="text-right"><span class="text-muted">$30.00</span></td>
+                                  <td onclick="Malteada_Seleccionada()"><script>console.log(malteada.Descripcion_malteada);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>console.log(malteada.PrecioUnitario);</script></span></td>
                                 </tr>
                               </tbody></table>
                             </div>
@@ -857,15 +851,17 @@
                                     <input type="text" class="form-control form-control-sm" class="busqueda" placeholder="Introducir código..." name="s">
 
                                       <!--INTENTANDO QUE LOS CÓDIGOS DE BARRAS COINCIDAN Y AGREGAR UN NUEVO PRODUCTO-------->
-
                                       <script>
-                                        if (busqueda = Mem_Usb.codigo_memUSB) {
-                                          function(){
-                                            //Agregar a la tabla 2
-                                          };
+                                        if (busqueda = ensaladapollo.codigo_ensaladaPollo) {
+                                          document.write(EnsaladaPollo_Seleccionada());
+                                        }
+                                        if (busqueda = hamburguesa.codigo_hamburguesa) {
+                                          document.write(Hamburguesa_Seleccionada());
+                                        }
+                                        if (busqueda = malteada.codigo_malteada) {
+                                          document.write(Malteada_Seleccionada());
                                         }
                                       </script>
-
 
                                     <span class="input-group-btn ml-2">
                                       <button class="btn btn-sm btn-default" type="submit">
@@ -896,20 +892,39 @@
                                     <tr>
                                       <!--Para poner una row según el producto
                                         console.log(ensaladapollo.codigo_ensaladaPollo());
-                                        document.write(ensaladapollo.codigo_ensaladaPollo);
-                                      --->
+                                        document.write(ensaladapollo.codigo_ensaladaPollo);--->
+
                                       <script>
                                       function EnsaladaPollo_Seleccionada(){
                                         document.write(
-                                          "<td><span class=\"text-muted\"><\/span><\/td>"
-                                          "<td><span class=\"text-muted\"><\/span><\/td>"
-                                          "<td class=\"text-right\"><\/td>"
-                                          "<td class=\"text-right\"><\/td>"
-                                          "<td class=\"text-right\"><\/td>"
-                                          "<td class=\"text-right\"><\/td>");
+                                          "<td><span class=\"text-muted\"><script>console.log(ensaladapollo.codigo_ensaladaPollo);<\/script<\/span><\/td>"
+                                          "<td><span class=\"text-muted\"><script>console.log(ensaladapollo.Descripcion_ensaladaPollo);<\/script><\/span><\/td>"
+                                          "<td class=\"text-right\"><script>console.log(ensaladapollo.Cantidad);<\/script><\/td>"
+                                          "<td class=\"text-right\"><script>console.log(ensaladapollo.PrecioUnitario);<\/script><\/td>"
+                                          "<td class=\"text-right\">0%<\/td>"
+                                          "<td class=\"text-right\"><script>console.log(Subtotal_Ensalada.Elsubtotal_ensaladaPollo);<\/script><\/td>");
+                                      }
+                                      function Hamburguesa_Seleccionada(){
+                                        document.write(
+                                          "<td><span class=\"text-muted\"><script>console.log(hamburguesa.codigo_hamburguesa);<\/script<\/span><\/td>"
+                                          "<td><span class=\"text-muted\"><script>console.log(hamburguesa.Descripcion_hamburguesa);<\/script><\/span><\/td>"
+                                          "<td class=\"text-right\"><script>console.log(hamburguesa.Cantidad);<\/script><\/td>"
+                                          "<td class=\"text-right\"><script>console.log(hamburguesa.PrecioUnitario);<\/script><\/td>"
+                                          "<td class=\"text-right\">0%<\/td>"
+                                          "<td class=\"text-right\"><script>console.log(subtotal_hamburguesa.Elsubtotal_hamburguesa);<\/script><\/td>");
+                                        );
+                                      }
+                                      function Malteada_Seleccionada(){
+                                        document.write(
+                                          "<td><span class=\"text-muted\"><script>console.log(malteada.codigo_malteada);<\/script<\/span><\/td>"
+                                          "<td><span class=\"text-muted\"><script>console.log(malteada.Descripcion_malteada);<\/script><\/span><\/td>"
+                                          "<td class=\"text-right\"><script>console.log(malteada.Cantidad);<\/script><\/td>"
+                                          "<td class=\"text-right\"><script>console.log(malteada_PrecioUnitario);<\/script><\/td>"
+                                          "<td class=\"text-right\">0%<\/td>"
+                                          "<td class=\"text-right\"><script>console.log(subtotal_malteada.Elsubtotal_malteada);<\/script><\/td>");
+                                        );
                                       }
                                       </script>
-
 
                                       <!---Pantalla 2--->
                                       <td><span class="text-muted">001401</span></td>
@@ -919,39 +934,35 @@
                                       <td class="text-right">0%</td>
                                       <td class="text-right">$1,875.00</td>
 
-
                                       <!--BOTÓN PARA ACTUALIZAR LISTA------>
                                       <td>
-                                        <a class="icon" class="editar" href="javascript:void(0)">
+                                        <a class="icon" onclick="editarCantidad()" href="javascript:void(0)">
                                           <i class="fe fe-edit"></i>
                                         </a>
+
                                         <!--OCUPO DETALLES DE COMO SERÍA AL EDITARLO------>
                                         <script>
-                                          if (editar.onclick()) {
-                                            function(){
-                                              //poner un text area para poder cambiar el numero de la cantidad???
-                                            };
+                                          function editarCantidad(){
+                                            //Agregaría un text area ?
                                           }
                                         </script>
 
                                       </td>
                                       <!--BOTÓN PARA ELIMINAR LISTA------->
-                                      <td>
-                                          <a class="icon" class="eliminar" href="javascript:void(0)">
+                                      <td class="eliminar">
+                                          <a class="icon" href="javascript:void(0)">
                                             <i class="fe fe-delete"></i>
                                           </a>
 
-                                          <!---Necesito corregir esta sentencia      Falta algo?---->
-                                          <script>
-                                          var eliminar_fila = new eliminar();
 
-                                          if (eliminar.onclick()) {
-                                            deleteRow(eliminar_fila);
-                                          }
-                                          else{
-                                            alert("No se puede eliminar el articulo seleccionado");
-                                          }
+                                          <!---Necesito corregir esta sentencia      Falta algo?---->
+                                          <script type="text/javascript" src="path/to/jquery.min.js">
+                                            $(document).on('click', '.eliminar', function (event) {
+                                              event.preventDefault();
+                                              $('this').closest('tr').remove();
+                                            });
                                           </script>
+
 
                                         </td>
                                     </tr>
@@ -1008,23 +1019,60 @@
 
                         <!---Precio Unitario * Cantidad     Para cada una?--->
                         <script>
-                          class subtotal {
+                          class subtotal_ensaladaPollo {
                             constructor(PrecioUnitario,Cantidad) {
                               this.PrecioUnitario = PrecioUnitario;
                               this.Cantidad = Cantidad;
                             }
 
-                            get Elsubtotal(){
+                            get Elsubtotal_ensaladaPollo(){
                               return this.calcular();
                             }
+
                             calcular(){
                               return this.PrecioUnitario * this.Cantidad;
                             }
                           }
 
-                          var Subtotal_Ensalada = new subtotal(ensaladapollo.Cantidad,ensaladapollo.PrecioUnitario);
+                          var Subtotal_Ensalada = new subtotal_ensaladaPollo(ensaladapollo.Cantidad,ensaladapollo.PrecioUnitario);
 
-                          //Para mostrarlos console.log(Subtotal_Ensalada.Elsubtotal);
+                          //Para mostrarlos console.log(Subtotal_Ensalada.Elsubtotal_ensaladaPollo);
+
+                          class Subtotal_Hamburguesa {
+                            constructor(Cantidad,PrecioUnitario) {
+                              this.PrecioUnitario = PrecioUnitario;
+                              this.Cantidad = Cantidad;
+                            }
+
+                            get Elsubtotal_hamburguesa(){
+                              return this.calcular();
+                            }
+
+                            calcular(){
+                              return this.PrecioUnitario * this.Cantidad;
+                            }
+                          }
+
+                          var subtotal_hamburguesa = new Subtotal_Hamburguesa(hamburguesa.Cantidad, hamburguesa.PrecioUnitario);
+                          //Para mostrarlos console.log(subtotal_hamburguesa.Elsubtotal_hamburguesa);
+
+                          class Malteada_Fresa_Subtotal {
+                            constructor(Cantidad, PrecioUnitario) {
+                                this.Cantidad = Cantidad;
+                                this.PrecioUnitario = PrecioUnitario;
+                            }
+
+                            get Elsubtotal_malteada(){
+                              return this.calcular();
+                            }
+
+                            calcular(){
+                              return this.PrecioUnitario * this.Cantidad;
+                            }
+                          }
+
+                          var subtotal_malteada = new Malteada_Fresa_Subtotal(malteada.Cantidad, malteada.PrecioUnitario);
+                          //Para mostrarlos console.log(subtotal_malteada.Elsubtotal_malteada);
 
                         </script>
 
@@ -1032,12 +1080,12 @@
                         <!---Espero que funcione....----->
                         <script>
                           //precio unitario * cantidad, después subtotal * iva, ese resultado se imprime en el total.
-                          class Iva_Subtotal {
+                          class Iva_Subtotal_ensaladaPollo {
                             constructor(Subtotal_Ensalada) {
                               this.Subtotal_Ensalada = Subtotal_Ensalada;
                             }
 
-                            get El_iva(){
+                            get El_iva_hamburguesa(){
                               return this.iva();
                             }
 
@@ -1050,12 +1098,58 @@
                             }
 
                             total(){
-                              return this.Subtotal_Ensalada + this.iva;
+                              return this.Subtotal_Ensalada + this.iva();
                             }
                           }
 
-                          var Iva = new Iva_Subtotal();
-                          //Para mostrarlos console.log(Subtotal_Ensalada.Elsubtotal);
+                          var Iva_ensaladaPollo = new Iva_Subtotal_ensaladaPollo();
+                          //Para mostrarlos console.log(Iva_ensaladaPollo.total());
+
+                          class Iva_Subtotal_hamburguesa {
+                            constructor(subtotal_hamburguesa) {
+                              this.subtotal_hamburguesa = subtotal_hamburguesa;
+                            }
+                            get iva_hamburguesa(){
+                              return this.iva();
+                            }
+
+                            iva(){
+                              return this.subtotal_hamburguesa * 0.16;
+                            }
+
+                            get total(){
+                              return this.total();
+                            }
+
+                            total(){
+                              return this.subtotal_hamburguesa + this.iva();
+                            }
+                          }
+                          var Iva_hamburguesa = new Iva_Subtotal_hamburguesa();
+
+                          class Iva_Subtotal_malteada {
+                            constructor(subtotal_malteada) {
+                              this.subtotal_malteada = subtotal_malteada;
+                            }
+
+                            get iva_malteada(){
+                              return this.iva();
+                            }
+
+                            iva(){
+                              return this.subtotal_malteada * 0.16;
+                            }
+
+                            get total_malteada(){
+                              return this.total();
+                            }
+
+                            total(){
+                              return this.subtotal_malteada + this.iva();
+                            }
+                          }
+
+                          var Iva_malteada_subt = new Iva_Subtotal_malteada();
 
                         </script>
 
