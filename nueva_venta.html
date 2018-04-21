@@ -184,35 +184,138 @@
                         <div class="card-header">
                             <h3 class="card-title">
                                 <a class="btn btn-secondary btn-sm" onclick="ApareceAlimento()">Alimentos</a>
-
-                                  <!--INTENTANDO REALIZAR QUE LA PAGINA CUANDO SE CARGE APAREZCA POR DEFAULT LA CATEGORIA ALIMENTO-->
+                                <!--Estas funciones cumplen con lo siguiente:
+                                  te permiten ver los productos almacenados en cada categoria
+                                  no te muestran los productos de las otras categorias que no son sus respectivas correspondientes
+                                  funcionan al 100%-->
                                   <script>
                                     function ApareceAlimento(){
-                                      //Mostrar el contenido de la tabla, en especial de la categoria alimentos
-                                      //getElementById('id'); con algo más y funcionará..
+                                      var si_alimentos = document.getElementById('tabla_productos_alimentos');
+                                      si_alimentos.style.display = "initial";
 
+                                      var soda_no = document.getElementById('tabla_productos_bebidas');
+                                      soda_no.style.display = "none";
+
+                                      var no_platillo = document.getElementById('tabla_productos_platillos');
+                                      no_platillo.style.display = "none";
+
+                                      var no_extras = document.getElementById('tabla_productos_extras');
+                                      no_extras.style.display = "none";
+
+                                      var no_servicios = document.getElementById('tabla_productos_servicios');
+                                      no_servicios.style.display = "none";
+
+                                      var no_otros = document.getElementById('tabla_productos_otros');
+                                      no_otros.style.display = "none";
                                     }
 
-                                    window.onload = ApareceAlimento();
+                                  //INTENTANDO REALIZAR QUE LA PAGINA CUANDO SE CARGE APAREZCA POR DEFAULT LA CATEGORIA ALIMENTO
+                                  //Mostrar el contenido de la tabla, en especial de la categoria alimentos.. Funciona 100%
+                                  //Mejor cambiarlo por document.ready... creo..
+                                    function carga(){
+                                      ApareceAlimento();
+                                    };
+
+                                    window.onload = carga;
 
                                     function ApareceExtras(){
+                                      var si_extras = document.getElementById('tabla_productos_extras');
+                                      si_extras.style.display = "initial";
 
+                                      var soda_no = document.getElementById('tabla_productos_bebidas');
+                                      soda_no.style.display = "none";
+
+                                      var no_platillo = document.getElementById('tabla_productos_platillos');
+                                      no_platillo.style.display = "none";
+
+                                      var no_alimentos = document.getElementById('tabla_productos_alimentos');
+                                      no_alimentos.style.display = "none";
+
+                                      var no_servicios = document.getElementById('tabla_productos_servicios');
+                                      no_servicios.style.display = "none";
+
+                                      var no_otros = document.getElementById('tabla_productos_otros');
+                                      no_otros.style.display = "none";
                                     }
 
                                     function ApareceOtros(){
+                                      var si_otros = document.getElementById('tabla_productos_otros');
+                                      si_otros.style.display = "initial";
 
+                                      var soda_no = document.getElementById('tabla_productos_bebidas');
+                                      soda_no.style.display = "none";
+
+                                      var no_alimentos = document.getElementById('tabla_productos_alimentos');
+                                      no_alimentos.style.display = "none";
+
+                                      var no_platillo = document.getElementById('tabla_productos_platillos');
+                                      no_platillo.style.display = "none";
+
+                                      var no_extras = document.getElementById('tabla_productos_extras');
+                                      no_extras.style.display = "none";
+
+                                      var no_servicios = document.getElementById('tabla_productos_servicios');
+                                      no_servicios.style.display = "none";
                                     }
 
                                     function ApareceBebidas(){
+                                      var soda_si = document.getElementById('tabla_productos_bebidas');
+                                      soda_si.style.display = "initial";
 
+                                      var no_alimentos = document.getElementById('tabla_productos_alimentos');
+                                      no_alimentos.style.display = "none";
+
+                                      var no_platillo = document.getElementById('tabla_productos_platillos');
+                                      no_platillo.style.display = "none";
+
+                                      var no_extras = document.getElementById('tabla_productos_extras');
+                                      no_extras.style.display = "none";
+
+                                      var no_servicios = document.getElementById('tabla_productos_servicios');
+                                      no_servicios.style.display = "none";
+
+                                      var no_otros = document.getElementById('tabla_productos_otros');
+                                      no_otros.style.display = "none";
                                     }
 
                                     function AparecePlatillos(){
+                                      var si_platillo = document.getElementById('tabla_productos_platillos');
+                                      si_platillo.style.display = "initial";
 
+                                      var no_otros = document.getElementById('tabla_productos_otros');
+                                      no_otros.style.display = "none";
+
+                                      var no_bebidas = document.getElementById('tabla_productos_bebidas');
+                                      no_bebidas.style.display = "none";
+
+                                      var no_alimentos = document.getElementById('tabla_productos_alimentos');
+                                      no_alimentos.style.display = "none";
+
+                                      var no_extras = document.getElementById('tabla_productos_extras');
+                                      no_extras.style.display = "none";
+
+                                      var no_servicios = document.getElementById('tabla_productos_servicios');
+                                      no_servicios.style.display = "none";
                                     }
 
                                     function ApareceServicios(){
+                                      var si_servicios = document.getElementById('tabla_productos_servicios');
+                                      si_servicios.style.display = "initial";
 
+                                      var no_bebidas = document.getElementById('tabla_productos_bebidas');
+                                      no_bebidas.style.display = "none";
+
+                                      var no_otros = document.getElementById('tabla_productos_otros');
+                                      no_otros.style.display = "none";
+
+                                      var no_alimentos = document.getElementById('tabla_productos_alimentos');
+                                      no_alimentos.style.display = "none";
+
+                                      var no_extras = document.getElementById('tabla_productos_extras');
+                                      no_extras.style.display = "none";
+
+                                      var no_platillo = document.getElementById('tabla_productos_platillos');
+                                      no_platillo.style.display = "none";
                                     }
 
                                     //REALIZAR QUE CUANDO SE SELECCIONE LA CATEGORÍA DE ALIMENTOS APAREZCAN EN LA PRIMERA TABLA
@@ -430,6 +533,7 @@
                                 </script>
                             </h3>
                           </div>
+                          <!--Tabla para los alimentos -->
                         <div class="card-body o-auto"  id="tabla_productos_alimentos" style="height: 20rem">
                             <table class="table card-table">
                                 <tbody><tr>
@@ -449,6 +553,96 @@
                                 </tr>
                               </tbody></table>
                             </div>
+                            <!--Tabla para las bebidas-->
+                        <div class="card-body o-auto"  id="tabla_productos_bebidas" style="height: 20rem">
+                            <table class="table card-table">
+                                <tbody><tr>
+                                  <td width="1"><span class="status-icon bg-success"></span></td>
+                                  <td><script>document.write(refresco_coca.Descripcion_refresco_cola);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(refresco_coca.PrecioUnitario);</script></span></td>
+                                </tr>
+                                <tr>
+                                  <td><span class="status-icon bg-warning"></span></td>
+                                  <td><script>document.write(limonada.Descripcion_limonada);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(limonada.PrecioUnitario);</script></span></td>
+                                </tr>
+                                <tr>
+                                  <td><span class="status-icon bg-danger"></span></i></td>
+                                  <td><script>document.write(jugoNaranja.Descripcion_jugo_naranja);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(jugoNaranja.PrecioUnitario);</script></span></td>
+                                </tr>
+                              </tbody></table>
+                            </div>
+                            <!--Tabla para los platillos-->
+                        <div class="card-body o-auto" id="tabla_productos_platillos" style="height: 20rem">
+                            <table class="table card-table">
+                                <tbody><tr>
+                                  <td width="1"><span class="status-icon bg-success"></span></td>
+                                  <td><script>document.write(espaguetti_bolonesa.Descripcion_espaguettiBolonesa);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(espaguetti_bolonesa.PrecioUnitario);</script></span></td>
+                                </tr>
+                                <tr>
+                                  <td><span class="status-icon bg-warning"></span></td>
+                                  <td><script>document.write(pescado_salsa_verde.Descripcion_pescadoSalsaVerde);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(pescado_salsa_verde.PrecioUnitario);</script></span></td>
+                                </tr>
+                                <tr>
+                                  <td><span class="status-icon bg-danger"></span></i></td>
+                                  <td><script>document.write(tamales.Descripcion_tamales);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write(tamales.PrecioUnitario);</script></span></td>
+                                </tr>
+                              </tbody></table>
+                            </div>
+                              <!--Tabla para extras-->
+                            <div class="card-body o-auto" id="tabla_productos_extras" style="height: 20rem">
+                                <table class="table card-table">
+                                    <tbody><tr>
+                                      <td width="1"><span class="status-icon bg-success"></span></td>
+                                      <td><script>document.write(chicles.Descripcion_chicles);</script></td>
+                                      <td class="text-right"><span class="text-muted"><script>document.write(chicles.PrecioUnitario);</script></span></td>
+                                    </tr>
+                                    <tr>
+                                      <td><span class="status-icon bg-warning"></span></td>
+                                      <td><script>document.write(cafesito.Descripcion_cafe);</script></td>
+                                      <td class="text-right"><span class="text-muted"><script>document.write(cafesito.PrecioUnitario);</script></span></td>
+                                    </tr>
+                                    <tr>
+                                      <td><span class="status-icon bg-danger"></span></i></td>
+                                      <td><script>document.write(cono_helado.Descripcion_helado);</script></td>
+                                      <td class="text-right"><span class="text-muted"><script>document.write(cono_helado.PrecioUnitario);</script></span></td>
+                                    </tr>
+                                  </tbody></table>
+                                </div>
+                                <!--Tabla para los servicios-->
+                                <div class="card-body o-auto" id="tabla_productos_servicios" style="height: 20rem">
+                                    <table class="table card-table">
+                                        <tbody><tr>
+                                          <td width="1"><span class="status-icon bg-success"></span></td>
+                                          <td><script>document.write(pagotel.Descripcion_pagoTel);</script></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write(pagotel.PrecioUnitario);</script></span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><span class="status-icon bg-warning"></span></td>
+                                          <td><script>document.write(pago_agua.Descripcion_pagoAgua);</script></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write(pago_agua.PrecioUnitario);</script></span></td>
+                                        </tr>
+                                      </tbody></table>
+                                    </div>
+                                <!--Tabla para los Otros-->
+                                <div class="card-body o-auto" id="tabla_productos_otros" style="height: 20rem">
+                                    <table class="table card-table">
+                                        <tbody><tr>
+                                          <td width="1"><span class="status-icon bg-success"></span></td>
+                                          <td><script>document.write(pluma_negra.Descripcion_pluma);</script></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write(pluma_negra.PrecioUnitario);</script></span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><span class="status-icon bg-warning"></span></td>
+                                          <td><script>document.write(Mem_Usb.Descripcion_memUSB);</script></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write(Mem_Usb.PrecioUnitario);</script></span></td>
+                                        </tr>
+                                      </tbody></table>
+                                    </div>
                                 <!--
                                 <tr>
                                   <td><span class="status-icon bg-success"></span></td>
