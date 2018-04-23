@@ -188,6 +188,7 @@
                                   te permiten ver los productos almacenados en cada categoria
                                   no te muestran los productos de las otras categorias que no son sus respectivas correspondientes
                                   funcionan al 100%-->
+
                                   <script>
                                     function ApareceAlimento(){
                                       var si_alimentos = document.getElementById('tabla_productos_alimentos');
@@ -356,9 +357,22 @@
 
                                     var malteada = new Malteada(00003, "Malteada de Fresa", 1, 20.00);
                                   </script>
-
+                                  <!--Para la version nueva de jQuery quedó obsoleta document.ready,
+                                segun se debe de ver $(function{.....}); con eso se debería de ver pero no...-->
+                                <!--
+                                  <script src="https://code.jquery.com/jquery-3.3.1.js" or src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                                    $(document).ready(function(){
+                                      //Aplicando mal css?
+                                      $("#tabla_productos_alimentos").show();
+                                      $("#tabla_productos_bebidas").hide();
+                                      $("#tabla_productos_otros").hide();
+                                      $("#tabla_productos_platillos").hide();
+                                      $("#tabla_productos_servicios").hide();
+                                      $("#tabla_productos_extras").hide();
+                                    });
+                                  </script>
+                                -->
                                 <a class="btn btn-secondary btn-sm" onclick="ApareceBebidas()">Bebidas</a>
-
                                 <!---CREANDO LA INFORMACIÓN PARA LA CATEGORÍA BEBIDAS-->
                                 <!--LAS CLASES DE BEBIDAS-->
                                 <script>
@@ -473,7 +487,6 @@
                                 }
 
                                 var cono_helado = new Cono_Helado_Vainilla(00012,"Cono de Helado Vainilla", 1, 15.00);
-
                                 </script>
 
                                 <!--VALORES PARA SERVICIOS-->
@@ -538,18 +551,18 @@
                             <table class="table card-table">
                                 <tbody><tr>
                                   <td width="1"><span class="status-icon bg-success"></span></td>
-                                  <td><script>document.write(ensaladapollo.Descripcion_ensaladaPollo);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(ensaladapollo.PrecioUnitario);</script></span></td>
+                                  <td onclick="agregar_ensaladapollo()"><script>document.write(ensaladapollo.Descripcion_ensaladaPollo);</script></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+ensaladapollo.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-warning"></span></td>
                                   <td><script>document.write(hamburguesa.Descripcion_hamburguesa);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(hamburguesa.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+hamburguesa.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-danger"></span></i></td>
                                   <td><script>document.write(malteada.Descripcion_malteada);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(malteada.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+malteada.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                               </tbody></table>
                             </div>
@@ -559,17 +572,17 @@
                                 <tbody><tr>
                                   <td width="1"><span class="status-icon bg-success"></span></td>
                                   <td><script>document.write(refresco_coca.Descripcion_refresco_cola);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(refresco_coca.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+refresco_coca.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-warning"></span></td>
                                   <td><script>document.write(limonada.Descripcion_limonada);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(limonada.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+limonada.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-danger"></span></i></td>
                                   <td><script>document.write(jugoNaranja.Descripcion_jugo_naranja);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(jugoNaranja.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+jugoNaranja.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                               </tbody></table>
                             </div>
@@ -579,17 +592,17 @@
                                 <tbody><tr>
                                   <td width="1"><span class="status-icon bg-success"></span></td>
                                   <td><script>document.write(espaguetti_bolonesa.Descripcion_espaguettiBolonesa);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(espaguetti_bolonesa.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+espaguetti_bolonesa.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-warning"></span></td>
                                   <td><script>document.write(pescado_salsa_verde.Descripcion_pescadoSalsaVerde);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(pescado_salsa_verde.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+pescado_salsa_verde.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                                 <tr>
                                   <td><span class="status-icon bg-danger"></span></i></td>
                                   <td><script>document.write(tamales.Descripcion_tamales);</script></td>
-                                  <td class="text-right"><span class="text-muted"><script>document.write(tamales.PrecioUnitario);</script></span></td>
+                                  <td class="text-right"><span class="text-muted"><script>document.write("$"+tamales.PrecioUnitario+".00");</script></span></td>
                                 </tr>
                               </tbody></table>
                             </div>
@@ -599,17 +612,17 @@
                                     <tbody><tr>
                                       <td width="1"><span class="status-icon bg-success"></span></td>
                                       <td><script>document.write(chicles.Descripcion_chicles);</script></td>
-                                      <td class="text-right"><span class="text-muted"><script>document.write(chicles.PrecioUnitario);</script></span></td>
+                                      <td class="text-right"><span class="text-muted"><script>document.write("$"+chicles.PrecioUnitario+".00");</script></span></td>
                                     </tr>
                                     <tr>
                                       <td><span class="status-icon bg-warning"></span></td>
                                       <td><script>document.write(cafesito.Descripcion_cafe);</script></td>
-                                      <td class="text-right"><span class="text-muted"><script>document.write(cafesito.PrecioUnitario);</script></span></td>
+                                      <td class="text-right"><span class="text-muted"><script>document.write("$"+cafesito.PrecioUnitario+".00");</script></span></td>
                                     </tr>
                                     <tr>
                                       <td><span class="status-icon bg-danger"></span></i></td>
                                       <td><script>document.write(cono_helado.Descripcion_helado);</script></td>
-                                      <td class="text-right"><span class="text-muted"><script>document.write(cono_helado.PrecioUnitario);</script></span></td>
+                                      <td class="text-right"><span class="text-muted"><script>document.write("$"+cono_helado.PrecioUnitario+".00");</script></span></td>
                                     </tr>
                                   </tbody></table>
                                 </div>
@@ -619,12 +632,12 @@
                                         <tbody><tr>
                                           <td width="1"><span class="status-icon bg-success"></span></td>
                                           <td><script>document.write(pagotel.Descripcion_pagoTel);</script></td>
-                                          <td class="text-right"><span class="text-muted"><script>document.write(pagotel.PrecioUnitario);</script></span></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write("$"+pagotel.PrecioUnitario+".00");</script></span></td>
                                         </tr>
                                         <tr>
                                           <td><span class="status-icon bg-warning"></span></td>
                                           <td><script>document.write(pago_agua.Descripcion_pagoAgua);</script></td>
-                                          <td class="text-right"><span class="text-muted"><script>document.write(pago_agua.PrecioUnitario);</script></span></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write("$"+pago_agua.PrecioUnitario+".00");</script></span></td>
                                         </tr>
                                       </tbody></table>
                                     </div>
@@ -634,12 +647,12 @@
                                         <tbody><tr>
                                           <td width="1"><span class="status-icon bg-success"></span></td>
                                           <td><script>document.write(pluma_negra.Descripcion_pluma);</script></td>
-                                          <td class="text-right"><span class="text-muted"><script>document.write(pluma_negra.PrecioUnitario);</script></span></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write("$"+pluma_negra.PrecioUnitario+".00");</script></span></td>
                                         </tr>
                                         <tr>
                                           <td><span class="status-icon bg-warning"></span></td>
                                           <td><script>document.write(Mem_Usb.Descripcion_memUSB);</script></td>
-                                          <td class="text-right"><span class="text-muted"><script>document.write(Mem_Usb.PrecioUnitario);</script></span></td>
+                                          <td class="text-right"><span class="text-muted"><script>document.write("$"+Mem_Usb.PrecioUnitario+".00");</script></span></td>
                                         </tr>
                                       </tbody></table>
                                     </div>
@@ -709,66 +722,20 @@
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <!--Para poner una row según el producto
-                                        console.log(ensaladapollo.codigo_ensaladaPollo());
-                                        document.write(ensaladapollo.codigo_ensaladaPollo);-->
-
-                                      <script>
-                                        /*
-                                      function EnsaladaPollo_Seleccionada(){
-                                        document.write(
-                                          "<td><span class=\"text-muted\"><script>console.log(ensaladapollo.codigo_ensaladaPollo);<\/script<\/span><\/td>"
-                                          "<td><span class=\"text-muted\"><script>console.log(ensaladapollo.Descripcion_ensaladaPollo);<\/script><\/span><\/td>"
-                                          "<td class=\"text-right\"><script>console.log(ensaladapollo.Cantidad);<\/script><\/td>"
-                                          "<td class=\"text-right\"><script>console.log(ensaladapollo.PrecioUnitario);<\/script><\/td>"
-                                          "<td class=\"text-right\">0%<\/td>"
-                                          "<td class=\"text-right\"><script>console.log(Subtotal_Ensalada.Elsubtotal_ensaladaPollo);<\/script><\/td>");
-                                      }
-                                      function Hamburguesa_Seleccionada(){
-                                        document.write(
-                                          "<td><span class=\"text-muted\"><script>console.log(hamburguesa.codigo_hamburguesa);<\/script<\/span><\/td>"
-                                          "<td><span class=\"text-muted\"><script>console.log(hamburguesa.Descripcion_hamburguesa);<\/script><\/span><\/td>"
-                                          "<td class=\"text-right\"><script>console.log(hamburguesa.Cantidad);<\/script><\/td>"
-                                          "<td class=\"text-right\"><script>console.log(hamburguesa.PrecioUnitario);<\/script><\/td>"
-                                          "<td class=\"text-right\">0%<\/td>"
-                                          "<td class=\"text-right\"><script>console.log(subtotal_hamburguesa.Elsubtotal_hamburguesa);<\/script><\/td>");
-                                        );
-                                      }
-                                      function Malteada_Seleccionada(){
-                                        document.write(
-                                          "<td><span class=\"text-muted\"><script>console.log(malteada.codigo_malteada);<\/script<\/span><\/td>"
-                                          "<td><span class=\"text-muted\"><script>console.log(malteada.Descripcion_malteada);<\/script><\/span><\/td>"
-                                          "<td class=\"text-right\"><script>console.log(malteada.Cantidad);<\/script><\/td>"
-                                          "<td class=\"text-right\"><script>console.log(malteada_PrecioUnitario);<\/script><\/td>"
-                                          "<td class=\"text-right\">0%<\/td>"
-                                          "<td class=\"text-right\"><script>console.log(subtotal_malteada.Elsubtotal_malteada);<\/script><\/td>");
-                                        );
-                                      }
-                                      */
-                                      </script>
-
+                                    <tr id="Selecciono_Ensalada">
                                       <!---Pantalla 2--->
-                                      <td><span class="text-muted">001401</span></td>
-                                      <td><span class="text-muted">Tornillos de Madera</span></td>
-                                      <td class="text-right">1</td>
-                                      <td class="text-right">$15.00</td>
+                                      <td><span class="text-muted"><script>document.write("0000"+ensaladapollo.codigo_ensaladaPollo);</script></span></td>
+                                      <td><span class="text-muted"><script>document.write(ensaladapollo.Descripcion_ensaladaPollo);</script></span></td>
+                                      <td class="text-right"><script>document.write(ensaladapollo.Cantidad);</script></td>
+                                      <td class="text-right"><script>document.write("$"+ensaladapollo.PrecioUnitario+".00");</script></td>
                                       <td class="text-right">0%</td>
-                                      <td class="text-right">$1,875.00</td>
+                                      <td class="text-right"><script>document.write("$"+ensaladapollo.PrecioUnitario*ensaladapollo.Cantidad+".00");</script></td>
 
                                       <!--BOTÓN PARA ACTUALIZAR LISTA------>
                                       <td>
                                         <a class="icon" onclick="editarCantidad()" href="javascript:void(0)">
                                           <i class="fe fe-edit"></i>
                                         </a>
-
-                                        <!--OCUPO DETALLES DE COMO SERÍA AL EDITARLO------>
-                                        <script>
-                                          function editarCantidad(){
-                                            //Agregaría un text area ?
-                                          }
-                                        </script>
-
                                       </td>
                                       <!--BOTÓN PARA ELIMINAR LISTA------->
                                       <td class="eliminar">
@@ -776,18 +743,113 @@
                                             <i class="fe fe-delete"></i>
                                           </a>
 
-
                                           <!---Necesito corregir esta sentencia      Falta algo?---->
-                                          <script type="text/javascript" src="assets/js/vendors/jquery-3.2.1.min.js">
+                                          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
                                             $(document).on('click', '.eliminar', function (event) {
                                               event.preventDefault();
                                               $('this').closest('tr').remove();
                                             });
                                           </script>
 
+                                        </td>
+                                    </tr>
+                                    <!--Para Ensalada-->
+                                    <tr id="Selecciono_Ensalada">
+                                      <!---Pantalla 2--->
+                                      <td><span class="text-muted"><script>document.write("0000"+refresco_coca.codigo_refresco_cola);</script></span></td>
+                                      <td><span class="text-muted"><script>document.write(refresco_coca.Descripcion_refresco_cola);</script></span></td>
+                                      <td class="text-right"><script>document.write(refresco_coca.Cantidad);</script></td>
+                                      <td class="text-right"><script>document.write("$"+refresco_coca.PrecioUnitario+".00");</script></td>
+                                      <td class="text-right">0%</td>
+                                      <td class="text-right"><script>document.write("$"+refresco_coca.PrecioUnitario*refresco_coca.Cantidad+".00");</script></td>
+                                      <!--BOTÓN PARA ACTUALIZAR LISTA------>
+                                      <td>
+                                        <a class="icon" onclick="editarCantidad()" href="javascript:void(0)">
+                                          <i class="fe fe-edit"></i>
+                                        </a>
+                                      </td>
+                                      <!--BOTÓN PARA ELIMINAR LISTA------->
+                                      <td class="eliminar">
+                                          <a class="icon" href="javascript:void(0)">
+                                            <i class="fe fe-delete"></i>
+                                          </a>
+
+                                          <!---Necesito corregir esta sentencia      Falta algo?---->
+                                          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                                            $(document).on('click', '.eliminar', function (event) {
+                                              event.preventDefault();
+                                              $('this').closest('tr').remove();
+                                            });
+                                          </script>
 
                                         </td>
                                     </tr>
+
+                                    <!--Para Hamburguesa-->
+                                    <tr id="Selecciono_Hamburguesa">
+                                      <!---Pantalla 2--->
+                                      <td><span class="text-muted"><script>document.write("0000"+hamburguesa.codigo_hamburguesa);</script></span></td>
+                                      <td><span class="text-muted"><script>document.write(hamburguesa.Descripcion_hamburguesa);</script></span></td>
+                                      <td class="text-right"><script>document.write(hamburguesa.Cantidad);</script></td>
+                                      <td class="text-right"><script>document.write("$"+hamburguesa.PrecioUnitario+".00");</script></td>
+                                      <td class="text-right">0%</td>
+                                      <td class="text-right"><script>document.write("$"+hamburguesa.PrecioUnitario*hamburguesa.Cantidad+".00");</script></td>
+
+                                      <!--BOTÓN PARA ACTUALIZAR LISTA------>
+                                      <td>
+                                        <a class="icon" onclick="editarCantidad()" href="javascript:void(0)">
+                                          <i class="fe fe-edit"></i>
+                                        </a>
+                                      </td>
+                                      <!--BOTÓN PARA ELIMINAR LISTA------->
+                                      <td class="eliminar">
+                                          <a class="icon" href="javascript:void(0)">
+                                            <i class="fe fe-delete"></i>
+                                          </a>
+
+                                          <!---Necesito corregir esta sentencia      Falta algo?---->
+                                          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                                            $(document).on('click', '.eliminar', function (event) {
+                                              event.preventDefault();
+                                              $('this').closest('tr').remove();
+                                            });
+                                          </script>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr id="Selecciono_Malteada">
+                                      <!---Pantalla 2--->
+                                      <td><span class="text-muted"><script>document.write("0000"+malteada.codigo_malteada);</script></span></td>
+                                      <td><span class="text-muted"><script>document.write(malteada.Descripcion_malteada);</script></span></td>
+                                      <td class="text-right"><script>document.write(malteada.Cantidad);</script></td>
+                                      <td class="text-right"><script>document.write("$"+malteada.PrecioUnitario+".00");</script></td>
+                                      <td class="text-right">0%</td>
+                                      <td class="text-right"><script>document.write("$"+malteada.PrecioUnitario*malteada.Cantidad+".00");</script></td>
+
+                                      <!--BOTÓN PARA ACTUALIZAR LISTA------>
+                                      <td>
+                                        <a class="icon" onclick="editarCantidad()" href="javascript:void(0)">
+                                          <i class="fe fe-edit"></i>
+                                        </a>
+                                      </td>
+                                      <!--BOTÓN PARA ELIMINAR LISTA------->
+                                      <td class="eliminar">
+                                          <a class="icon" href="javascript:void(0)">
+                                            <i class="fe fe-delete"></i>
+                                          </a>
+
+                                          <!---Necesito corregir esta sentencia      Falta algo?---->
+                                          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                                            $(document).on('click', '.eliminar', function (event) {
+                                              event.preventDefault();
+                                              $('this').closest('tr').remove();
+                                            });
+                                          </script>
+
+                                        </td>
+                                    </tr>
+
                                   </tbody>
                                 </table>
                           </div>
@@ -841,138 +903,13 @@
 
                         <!---Precio Unitario * Cantidad     Para cada una?--->
                         <script>
-                          class subtotal_ensaladaPollo {
-                            constructor(PrecioUnitario,Cantidad) {
-                              this.PrecioUnitario = PrecioUnitario;
-                              this.Cantidad = Cantidad;
-                            }
-
-                            get Elsubtotal_ensaladaPollo(){
-                              return this.calcular();
-                            }
-
-                            calcular(){
-                              return this.PrecioUnitario * this.Cantidad;
+                          agregar_ensaladapollo(){
+                            document.getElementById('EnsaladaPollo_Seleccionada');
+                            //Si ya existe ensaladaPollo aumentar la cantidad          debe de existir una palabra reservada
+                            if(typeof nueva ){
+                              ensaladapollo.Cantidad = ensaladapollo.Cantidad + 1;
                             }
                           }
-
-                          var Subtotal_Ensalada = new subtotal_ensaladaPollo(ensaladapollo.Cantidad,ensaladapollo.PrecioUnitario);
-
-                          //Para mostrarlos console.log(Subtotal_Ensalada.Elsubtotal_ensaladaPollo);
-
-                          class Subtotal_Hamburguesa {
-                            constructor(Cantidad,PrecioUnitario) {
-                              this.PrecioUnitario = PrecioUnitario;
-                              this.Cantidad = Cantidad;
-                            }
-
-                            get Elsubtotal_hamburguesa(){
-                              return this.calcular();
-                            }
-
-                            calcular(){
-                              return this.PrecioUnitario * this.Cantidad;
-                            }
-                          }
-
-                          var subtotal_hamburguesa = new Subtotal_Hamburguesa(hamburguesa.Cantidad, hamburguesa.PrecioUnitario);
-                          //Para mostrarlos console.log(subtotal_hamburguesa.Elsubtotal_hamburguesa);
-
-                          class Malteada_Fresa_Subtotal {
-                            constructor(Cantidad, PrecioUnitario) {
-                                this.Cantidad = Cantidad;
-                                this.PrecioUnitario = PrecioUnitario;
-                            }
-
-                            get Elsubtotal_malteada(){
-                              return this.calcular();
-                            }
-
-                            calcular(){
-                              return this.PrecioUnitario * this.Cantidad;
-                            }
-                          }
-
-                          var subtotal_malteada = new Malteada_Fresa_Subtotal(malteada.Cantidad, malteada.PrecioUnitario);
-                          //Para mostrarlos console.log(subtotal_malteada.Elsubtotal_malteada);
-
-                        </script>
-
-                        <!---Como realizar el subtotal    Unicamente para la ensalada?--->
-                        <!---Espero que funcione....----->
-                        <script>
-                          //precio unitario * cantidad, después subtotal * iva, ese resultado se imprime en el total.
-                          class Iva_Subtotal_ensaladaPollo {
-                            constructor(Subtotal_Ensalada) {
-                              this.Subtotal_Ensalada = Subtotal_Ensalada;
-                            }
-
-                            get El_iva_hamburguesa(){
-                              return this.iva();
-                            }
-
-                            iva(){
-                              return this.Subtotal_Ensalada * 0.16;
-                            }
-
-                            get total(){
-                              return this.total();
-                            }
-
-                            total(){
-                              return this.Subtotal_Ensalada + this.iva();
-                            }
-                          }
-
-                          var Iva_ensaladaPollo = new Iva_Subtotal_ensaladaPollo();
-                          //Para mostrarlos console.log(Iva_ensaladaPollo.total());
-
-                          class Iva_Subtotal_hamburguesa {
-                            constructor(subtotal_hamburguesa) {
-                              this.subtotal_hamburguesa = subtotal_hamburguesa;
-                            }
-                            get iva_hamburguesa(){
-                              return this.iva();
-                            }
-
-                            iva(){
-                              return this.subtotal_hamburguesa * 0.16;
-                            }
-
-                            get total(){
-                              return this.total();
-                            }
-
-                            total(){
-                              return this.subtotal_hamburguesa + this.iva();
-                            }
-                          }
-                          var Iva_hamburguesa = new Iva_Subtotal_hamburguesa();
-
-                          class Iva_Subtotal_malteada {
-                            constructor(subtotal_malteada) {
-                              this.subtotal_malteada = subtotal_malteada;
-                            }
-
-                            get iva_malteada(){
-                              return this.iva();
-                            }
-
-                            iva(){
-                              return this.subtotal_malteada * 0.16;
-                            }
-
-                            get total_malteada(){
-                              return this.total();
-                            }
-
-                            total(){
-                              return this.subtotal_malteada + this.iva();
-                            }
-                          }
-
-                          var Iva_malteada_subt = new Iva_Subtotal_malteada();
-
                         </script>
 
                     </div>
